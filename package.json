@@ -1,0 +1,9 @@
+{
+  "name": "monikers-web-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A mobile-friendly pass-and-play Monikers app for GitHub Pages.",
+  "scripts": {
+    "start": "python -m http.server 5173"
+  }
+}
