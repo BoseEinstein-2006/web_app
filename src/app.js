@@ -364,9 +364,14 @@ function markCorrect() {
   state.totalScores[state.currentTeam] += 1;
   state.feedback = "correct";
 
-  // If the final card was guessed, the round ends immediately instead of waiting.
+  // If no skipped cards are waiting, the final correct card completes the round.
+  // If skipped cards exist, the turn ends so they can return and be guessed later.
   if (state.remainingDeck.length === 0) {
-    completeRound();
+    if (state.skippedPile.length === 0) {
+      completeRound();
+    } else {
+      endTurn();
+    }
     return;
   }
 
@@ -506,8 +511,8 @@ function roundPlacementRows(roundIndex) {
 
   if (scores[0] === scores[1]) {
     return `
-      <div class="score-row placement-row"><span>🤝 ${state.teams[0].name}</span><strong>${scores[0]}</strong></div>
-      <div class="score-row placement-row"><span>🤝 ${state.teams[1].name}</span><strong>${scores[1]}</strong></div>
+      <div class="score-row placement-row"><span>🤝 <strong>${state.teams[0].name}</strong></span><strong>${scores[0]}</strong></div>
+      <div class="score-row placement-row"><span>🤝 <strong>${state.teams[1].name}</strong></span><strong>${scores[1]}</strong></div>
     `;
   }
 
@@ -515,8 +520,8 @@ function roundPlacementRows(roundIndex) {
   const secondIndex = firstIndex === 0 ? 1 : 0;
 
   return `
-    <div class="score-row placement-row"><span>🥇 ${state.teams[firstIndex].name}</span><strong>${scores[firstIndex]}</strong></div>
-    <div class="score-row placement-row"><span>🥈 ${state.teams[secondIndex].name}</span><strong>${scores[secondIndex]}</strong></div>
+    <div class="score-row placement-row"><span>🥇 <strong>${state.teams[firstIndex].name}</strong></span><strong>${scores[firstIndex]}</strong></div>
+    <div class="score-row placement-row"><span>🥈 <strong>${state.teams[secondIndex].name}</strong></span><strong>${scores[secondIndex]}</strong></div>
   `;
 }
 
@@ -558,16 +563,16 @@ function renderGameOver() {
 function scoreRows(roundIndex) {
   // Shared markup for showing one round's Team A / Team B scores.
   return `
-    <div class="score-row"><span>${state.teams[0].name}</span><strong>${state.roundScores[roundIndex][0]}</strong></div>
-    <div class="score-row"><span>${state.teams[1].name}</span><strong>${state.roundScores[roundIndex][1]}</strong></div>
+    <div class="score-row"><span><strong>${state.teams[0].name}</strong></span><strong>${state.roundScores[roundIndex][0]}</strong></div>
+    <div class="score-row"><span><strong>${state.teams[1].name}</strong></span><strong>${state.roundScores[roundIndex][1]}</strong></div>
   `;
 }
 
 function totalRows() {
   // Shared markup for the final total scoreboard.
   return `
-    <div class="score-row"><span>${state.teams[0].name}</span><strong>${state.totalScores[0]}</strong></div>
-    <div class="score-row"><span>${state.teams[1].name}</span><strong>${state.totalScores[1]}</strong></div>
+    <div class="score-row"><span><strong>${state.teams[0].name}</strong></span><strong>${state.totalScores[0]}</strong></div>
+    <div class="score-row"><span><strong>${state.teams[1].name}</strong></span><strong>${state.totalScores[1]}</strong></div>
   `;
 }
 
