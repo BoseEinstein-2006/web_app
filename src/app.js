@@ -536,12 +536,12 @@ function renderGameOver() {
         ${Array.from({ length: MAX_ROUNDS }, (_, index) => `
           <div class="score-block">
             <h3>Раунд ${index + 1}</h3>
-            ${scoreRows(index)}
+            ${roundPlacementRows(index)}
           </div>
         `).join("")}
         <div class="score-block total">
           <h3>Итого</h3>
-          ${totalRows()}
+          ${totalPlacementRows()}
         </div>
       </div>
       <button class="primary" data-action="play-again">Играть снова</button>
@@ -569,6 +569,25 @@ function totalRows() {
   return `
     <div class="score-row"><span><strong>${state.teams[0].name}</strong></span><strong>${state.totalScores[0]}</strong></div>
     <div class="score-row"><span><strong>${state.teams[1].name}</strong></span><strong>${state.totalScores[1]}</strong></div>
+  `;
+}
+
+function totalPlacementRows() {
+  const scores = state.totalScores;
+
+  if (scores[0] === scores[1]) {
+    return `
+      <div class="score-row placement-row"><span>🤝 <strong>${state.teams[0].name}</strong></span><strong>${scores[0]}</strong></div>
+      <div class="score-row placement-row"><span>🤝 <strong>${state.teams[1].name}</strong></span><strong>${scores[1]}</strong></div>
+    `;
+  }
+
+  const firstIndex = scores[0] > scores[1] ? 0 : 1;
+  const secondIndex = firstIndex === 0 ? 1 : 0;
+
+  return `
+    <div class="score-row placement-row"><span>🥇 <strong>${state.teams[firstIndex].name}</strong></span><strong>${scores[firstIndex]}</strong></div>
+    <div class="score-row placement-row"><span>🥈 <strong>${state.teams[secondIndex].name}</strong></span><strong>${scores[secondIndex]}</strong></div>
   `;
 }
 
