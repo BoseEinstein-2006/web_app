@@ -309,6 +309,8 @@ function renderActiveTurn() {
   }
 
   const card = state.cardsById[turn.currentCardId];
+  const cardName = card?.name || "Нет карты";
+  const cardLengthClass = getCardLengthClass(cardName);
   app.innerHTML = `
     <section class="screen play-screen ${state.feedback ? `flash-${state.feedback}` : ""}">
       <button class="back-button play-back-button" data-action="pause-turn" aria-label="Назад">←</button>
@@ -317,7 +319,7 @@ function renderActiveTurn() {
         <span>${currentTeam().name}</span>
       </div>
       <div class="timer" data-timer>${secondsLeft}</div>
-      <article class="current-card">${card?.name || "Нет карты"}</article>
+      <article class="current-card ${cardLengthClass}">${cardName}</article>
       <div class="action-grid">
         <button class="correct" data-action="correct">Правильно</button>
         <button class="skip" data-action="skip">Пропустить</button>
@@ -624,6 +626,14 @@ function shuffle(items) {
 function clean(value) {
   // Normalize form values before storing team names.
   return String(value || "").trim();
+}
+
+function getCardLengthClass(name) {
+  // Long Russian names need smaller type, while short cards should stay punchy.
+  const length = [...String(name)].length;
+  if (length > 28) return "long-card";
+  if (length > 18) return "medium-card";
+  return "";
 }
 
 function clamp(value, min, max) {

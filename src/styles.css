@@ -307,6 +307,19 @@ h3 {
   line-height: 0.94;
   text-align: center;
   letter-spacing: -0.06em;
+  hyphens: auto;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.current-card.medium-card {
+  font-size: clamp(1.45rem, 6.8vw, 2.8rem);
+  line-height: 1;
+}
+
+.current-card.long-card {
+  font-size: clamp(1.15rem, 5.2vw, 2.15rem);
+  line-height: 1.05;
 }
 
 .action-grid {
