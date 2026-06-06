@@ -4,6 +4,11 @@
 // localStorage key used to persist and resume an unfinished game.
 const STORAGE_KEY = "party-card-game-state-v1";
 
+// The page sets this in index.html. Bump it when deploying changes that should
+// force existing browsers to load fresh files and reset older saved state.
+const APP_VERSION = window.APP_VERSION || "dev";
+const VERSION_KEY = "party-card-app-version";
+
 // The spec asks for timed turns; changing this value adjusts all turns at once.
 const TURN_SECONDS = 60;
 
@@ -51,6 +56,15 @@ async function loadCards() {
 
 function loadState() {
   try {
+    // If index.html announces a new app version, throw away old saved state.
+    // This prevents an old localStorage screen from hiding a newly deployed home UI.
+    const savedVersion = localStorage.getItem(VERSION_KEY);
+    if (savedVersion !== APP_VERSION) {
+      localStorage.removeItem(STORAGE_KEY);
+      localStorage.setItem(VERSION_KEY, APP_VERSION);
+      return null;
+    }
+
     // A saved JSON blob means the user can close the browser and continue later.
     const saved = localStorage.getItem(STORAGE_KEY);
     return saved ? JSON.parse(saved) : null;
@@ -62,12 +76,16 @@ function loadState() {
 
 function saveState() {
   // Save after every meaningful game action: correct, skip, turn end, round end, etc.
-  if (state) localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  if (state) {
+    localStorage.setItem(VERSION_KEY, APP_VERSION);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  }
 }
 
 function clearState() {
   // Used by Play Again to throw away the finished game before starting setup.
   localStorage.removeItem(STORAGE_KEY);
+  localStorage.setItem(VERSION_KEY, APP_VERSION);
   state = null;
 }
 

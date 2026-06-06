@@ -192,6 +192,27 @@ Important saved fields include:
 
 When the app starts, `loadState()` checks localStorage. If a saved game exists, the app resumes from the saved state. If there is no saved game, the app shows the home screen.
 
+## Cache Busting And Updates
+
+Browsers sometimes cache static GitHub Pages files aggressively. To make updates easier to see, `index.html` defines:
+
+```js
+window.APP_VERSION = "2026-06-06-2";
+```
+
+The same version is added to the CSS and JavaScript URLs:
+
+```html
+./src/styles.css?v=2026-06-06-2
+./src/app.js?v=2026-06-06-2
+```
+
+When this version changes, the browser treats the files as new URLs and requests fresh copies from GitHub Pages.
+
+The JavaScript also stores the current version in localStorage under `party-card-app-version`. If the saved version does not match the deployed version, `loadState()` clears the old saved game and starts from the home screen. This prevents an old saved screen from hiding a newly changed home screen.
+
+When you make a visible change and want everyone to get it, update the version string in `index.html`.
+
 ## Local Preview
 
 Use any static file server from this folder. For example:
