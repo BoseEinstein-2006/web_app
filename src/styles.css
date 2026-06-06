@@ -95,7 +95,7 @@ input:focus {
   display: grid;
   min-height: calc(100svh - 2rem);
   align-content: center;
-  gap: 1.2rem;
+  gap: 2.25rem;
   padding: 2rem 1.25rem;
   text-align: center;
 }
@@ -168,6 +168,15 @@ h3 {
   gap: 0.8rem;
 }
 
+.button-stack {
+  margin-top: clamp(2rem, 9svh, 4.5rem);
+}
+
+.setup-screen {
+  position: relative;
+  padding-top: 5.5rem;
+}
+
 .setup-form label {
   display: grid;
   gap: 0.4rem;
@@ -219,6 +228,11 @@ h3 {
   font-size: 1.65rem;
   line-height: 1;
   z-index: 2;
+}
+
+.setup-back-button {
+  top: 1rem;
+  left: 1rem;
 }
 
 .rules-image {

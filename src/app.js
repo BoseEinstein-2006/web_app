@@ -161,19 +161,23 @@ function renderRules() {
 function renderSetup() {
   // Setup collects only the MVP fields from the summary: team names, team sizes, deck size.
   app.innerHTML = `
-    <section class="screen card-panel">
-      <p class="eyebrow">New Game Setup</p>
-      <h2>Choose your chaos settings</h2>
+    <section class="screen card-panel setup-screen">
+      <button class="back-button setup-back-button" data-action="back-home" aria-label="Назад">←</button>
       <form id="setup-form" class="setup-form">
-        ${field("teamA", "Team 1 Name", "Team A", "text")}
-        ${field("teamASize", "Team 1 Players", "3", "number", 1)}
-        ${field("teamB", "Team 2 Name", "Team B", "text")}
-        ${field("teamBSize", "Team 2 Players", "3", "number", 1)}
-        ${field("deckSize", "Cards In Deck", "40", "number", 5, allCards.length)}
-        <button class="primary" type="submit">Start Game</button>
+        ${field("teamA", "Название команды 1", "Команда А", "text")}
+        ${field("teamASize", "Игроков в команде 1", "3", "number", 1)}
+        ${field("teamB", "Название команды 2", "Команда Б", "text")}
+        ${field("teamBSize", "Игроков в команде 2", "3", "number", 1)}
+        ${field("deckSize", "Карт в колоде", "40", "number", 5, allCards.length)}
+        <button class="primary" type="submit">Начать игру</button>
       </form>
     </section>
   `;
+
+  on("back-home", () => {
+    state = null;
+    render();
+  });
 
   document.querySelector("#setup-form").addEventListener("submit", (event) => {
     event.preventDefault();
@@ -191,8 +195,8 @@ function renderSetup() {
       screen: "turn-start",
       round: 1,
       teams: [
-        { name: clean(form.get("teamA")) || "Team A", players: Number(form.get("teamASize")) || 3 },
-        { name: clean(form.get("teamB")) || "Team B", players: Number(form.get("teamBSize")) || 3 },
+        { name: clean(form.get("teamA")) || "Команда А", players: Number(form.get("teamASize")) || 3 },
+        { name: clean(form.get("teamB")) || "Команда Б", players: Number(form.get("teamBSize")) || 3 },
       ],
       currentTeam: 0,
 
