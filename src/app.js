@@ -160,15 +160,16 @@ function renderRules() {
 
 function renderSetup() {
   // Setup collects only the MVP fields from the summary: team names, team sizes, deck size.
+  const defaults = getSetupDefaults();
   app.innerHTML = `
     <section class="screen card-panel setup-screen">
       <button class="back-button setup-back-button" data-action="back-home" aria-label="Назад">←</button>
       <form id="setup-form" class="setup-form">
-        ${field("teamA", "Название команды 1", "Команда А", "text")}
-        ${field("teamASize", "Игроков в команде 1", "3", "number", 1)}
-        ${field("teamB", "Название команды 2", "Команда Б", "text")}
-        ${field("teamBSize", "Игроков в команде 2", "3", "number", 1)}
-        ${field("deckSize", "Карт в колоде", "40", "number", 5, allCards.length)}
+        ${field("teamA", "Название команды 1", defaults.teamA, "text")}
+        ${field("teamASize", "Игроков в команде 1", defaults.teamASize, "number", 1)}
+        ${field("teamB", "Название команды 2", defaults.teamB, "text")}
+        ${field("teamBSize", "Игроков в команде 2", defaults.teamBSize, "number", 1)}
+        ${field("deckSize", "Карт в колоде", defaults.deckSize, "number", 5, allCards.length)}
         <button class="primary" type="submit">Начать игру</button>
       </form>
     </section>
@@ -226,6 +227,16 @@ function renderSetup() {
   });
 }
 
+function getSetupDefaults() {
+  return {
+    teamA: state?.teams?.[0]?.name || "Команда А",
+    teamASize: state?.teams?.[0]?.players || 3,
+    teamB: state?.teams?.[1]?.name || "Команда Б",
+    teamBSize: state?.teams?.[1]?.players || 3,
+    deckSize: state?.originalDeck?.length || 40,
+  };
+}
+
 function field(name, label, value, type, min = null, max = null) {
   // Small helper keeps the setup form markup consistent and readable.
   const attrs = [
@@ -248,20 +259,21 @@ function field(name, label, value, type, min = null, max = null) {
 function renderTurnStart() {
   // Turn Start is the handoff screen. The phone can be passed before the timer starts.
   app.innerHTML = `
-    <section class="screen card-panel center">
-      <p class="round-label">ROUND ${state.round}</p>
-      <h2>${currentTeam().name} Turn</h2>
-      <p class="lede">${state.remainingDeck.length} cards remaining</p>
-      <button class="primary" data-action="start-turn">Start Turn</button>
-      <button class="ghost" data-action="home">Back to Home</button>
+    <section class="screen card-panel center setup-screen">
+      <button class="back-button setup-back-button" data-action="back-setup" aria-label="Назад">←</button>
+      <p class="round-label">РАУНД ${state.round}</p>
+      <h2>Ход команды ${currentTeam().name}</h2>
+      <p class="lede">Осталось карт: ${state.remainingDeck.length}</p>
+      <button class="primary" data-action="start-turn">Начать ход</button>
     </section>
   `;
 
   on("start-turn", startTurn);
-  on("home", () => {
-    // Back to Home intentionally does not clear localStorage; Resume remains possible.
-    state = null;
-    renderHome();
+  on("back-setup", () => {
+    // Return to setup with the selected values preserved for quick corrections.
+    state.screen = "setup";
+    saveState();
+    render();
   });
 }
 
