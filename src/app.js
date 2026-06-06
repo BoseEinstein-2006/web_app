@@ -482,8 +482,8 @@ function renderRoundComplete() {
     <section class="screen card-panel center">
       <p class="eyebrow">Раунд завершён</p>
       <h2>Раунд ${state.round} завершён</h2>
-      ${scoreRows(state.round - 1)}
-      <button class="primary" data-action="next-round">Начать раунд ${state.round + 1}</button>
+      ${roundPlacementRows(state.round - 1)}
+      <button class="primary next-round-button" data-action="next-round">Начать раунд ${state.round + 1}</button>
     </section>
   `;
 
@@ -499,6 +499,25 @@ function renderRoundComplete() {
     saveState();
     render();
   });
+}
+
+function roundPlacementRows(roundIndex) {
+  const scores = state.roundScores[roundIndex];
+
+  if (scores[0] === scores[1]) {
+    return `
+      <div class="score-row placement-row"><span>🤝 ${state.teams[0].name}</span><strong>${scores[0]}</strong></div>
+      <div class="score-row placement-row"><span>🤝 ${state.teams[1].name}</span><strong>${scores[1]}</strong></div>
+    `;
+  }
+
+  const firstIndex = scores[0] > scores[1] ? 0 : 1;
+  const secondIndex = firstIndex === 0 ? 1 : 0;
+
+  return `
+    <div class="score-row placement-row"><span>🥇 ${state.teams[firstIndex].name}</span><strong>${scores[firstIndex]}</strong></div>
+    <div class="score-row placement-row"><span>🥈 ${state.teams[secondIndex].name}</span><strong>${scores[secondIndex]}</strong></div>
+  `;
 }
 
 function renderGameOver() {
