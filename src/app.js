@@ -1,25 +1,44 @@
+// The whole game lives in this one file because this is a static GitHub Pages app.
+// There is no backend: every screen, score, deck update, and resume action is local.
+
+// localStorage key used to persist and resume an unfinished game.
 const STORAGE_KEY = "monikers-game-state-v1";
+
+// The spec asks for timed turns; changing this value adjusts all turns at once.
 const TURN_SECONDS = 60;
+
+// Monikers has three rounds using the same deck with different clue rules.
 const MAX_ROUNDS = 3;
 
+// #app is the only DOM mount point. render() replaces its contents per screen.
 const app = document.querySelector("#app");
+
+// Loaded once from public/cards.json at startup.
 let allCards = [];
+
+// state is the single source of truth for the app.
+// If localStorage contains a saved game, loadState() restores it immediately.
 let state = loadState();
+
+// Holds the interval id while an active turn is counting down.
 let timerId = null;
 
 init();
 
 async function init() {
+  // Cards must be available before the setup screen can validate deck size.
   allCards = await loadCards();
   render();
 }
 
 async function loadCards() {
   try {
+    // GitHub Pages serves public/cards.json as a plain static asset.
     const response = await fetch("./public/cards.json", { cache: "no-store" });
     if (!response.ok) throw new Error("Could not load cards");
     return await response.json();
   } catch (error) {
+    // Tiny fallback deck prevents a completely blank app if the JSON request fails.
     return [
       { id: 1, name: "Harry Potter" },
       { id: 2, name: "Darth Vader" },
@@ -32,23 +51,28 @@ async function loadCards() {
 
 function loadState() {
   try {
+    // A saved JSON blob means the user can close the browser and continue later.
     const saved = localStorage.getItem(STORAGE_KEY);
     return saved ? JSON.parse(saved) : null;
   } catch {
+    // If saved data is corrupted, fail safely by starting from the home screen.
     return null;
   }
 }
 
 function saveState() {
+  // Save after every meaningful game action: correct, skip, turn end, round end, etc.
   if (state) localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 }
 
 function clearState() {
+  // Used by Play Again to throw away the finished game before starting setup.
   localStorage.removeItem(STORAGE_KEY);
   state = null;
 }
 
 function render() {
+  // Each render owns its own event listeners/timer. Clearing avoids duplicate timers.
   clearInterval(timerId);
   timerId = null;
 
@@ -57,6 +81,7 @@ function render() {
     return;
   }
 
+  // Basic screen router: state.screen decides which UI function draws the page.
   if (state.screen === "setup") renderSetup();
   if (state.screen === "turn-start") renderTurnStart();
   if (state.screen === "active-turn") renderActiveTurn();
@@ -66,6 +91,7 @@ function render() {
 }
 
 function renderHome() {
+  // Resume appears only when there is a saved game in localStorage.
   const hasSavedGame = Boolean(localStorage.getItem(STORAGE_KEY));
   app.innerHTML = `
     <section class="screen hero">
@@ -80,17 +106,20 @@ function renderHome() {
   `;
 
   on("new-game", () => {
+    // New Game does not immediately create the deck; it first opens setup.
     state = { screen: "setup" };
     render();
   });
 
   on("resume-game", () => {
+    // Resume restores the exact previous state, including round/team/deck.
     state = loadState();
     render();
   });
 }
 
 function renderSetup() {
+  // Setup collects only the MVP fields from the summary: team names, team sizes, deck size.
   app.innerHTML = `
     <section class="screen card-panel">
       <p class="eyebrow">New Game Setup</p>
@@ -109,9 +138,15 @@ function renderSetup() {
   document.querySelector("#setup-form").addEventListener("submit", (event) => {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
+
+    // Clamp deck size so the user cannot ask for more cards than cards.json contains.
     const deckSize = clamp(Number(form.get("deckSize")) || 40, 5, allCards.length);
+
+    // A new game uses a random subset of the built-in card database.
     const selectedCards = shuffle([...allCards]).slice(0, deckSize);
 
+    // This object is the full game save file. Keeping it serializable makes
+    // localStorage resume simple and reliable.
     state = {
       screen: "turn-start",
       round: 1,
@@ -120,13 +155,25 @@ function renderSetup() {
         { name: clean(form.get("teamB")) || "Team B", players: Number(form.get("teamBSize")) || 3 },
       ],
       currentTeam: 0,
+
+      // originalDeck never changes; rounds 2 and 3 rebuild from this same card set.
       originalDeck: selectedCards.map((card) => card.id),
+
+      // Store cards by id so the mutable decks only need to carry small ids.
       cardsById: Object.fromEntries(selectedCards.map((card) => [card.id, card])),
+
+      // remainingDeck is the live draw pile for the current round.
       remainingDeck: shuffle(selectedCards.map((card) => card.id)),
+
+      // guessedPile and skippedPile mirror the deck-management rules in the spec.
       guessedPile: [],
       skippedPile: [],
+
+      // roundScores[roundIndex][teamIndex], e.g. roundScores[0][1] is Team B in round 1.
       roundScores: Array.from({ length: MAX_ROUNDS }, () => [0, 0]),
       totalScores: [0, 0],
+
+      // lastTurn powers the summary screen; activeTurn powers the timer/card screen.
       lastTurn: null,
       activeTurn: null,
     };
@@ -136,6 +183,7 @@ function renderSetup() {
 }
 
 function field(name, label, value, type, min = null, max = null) {
+  // Small helper keeps the setup form markup consistent and readable.
   const attrs = [
     `id="${name}"`,
     `name="${name}"`,
@@ -154,6 +202,7 @@ function field(name, label, value, type, min = null, max = null) {
 }
 
 function renderTurnStart() {
+  // Turn Start is the handoff screen. The phone can be passed before the timer starts.
   app.innerHTML = `
     <section class="screen card-panel center">
       <p class="round-label">ROUND ${state.round}</p>
@@ -166,13 +215,18 @@ function renderTurnStart() {
 
   on("start-turn", startTurn);
   on("home", () => {
+    // Back to Home intentionally does not clear localStorage; Resume remains possible.
     state = null;
     renderHome();
   });
 }
 
 function startTurn() {
+  // Skips belong to a single turn, so each new turn begins with an empty skipped pile.
   state.skippedPile = [];
+
+  // Store startedAt instead of decrementing saved seconds. This makes refresh/resume
+  // during a turn behave naturally because remaining time is calculated from real time.
   state.activeTurn = {
     startedAt: Date.now(),
     duration: TURN_SECONDS,
@@ -187,6 +241,8 @@ function startTurn() {
 
 function renderActiveTurn() {
   const turn = state.activeTurn;
+
+  // The timer is derived from Date.now(), so it stays accurate even if rendering pauses.
   const secondsLeft = getSecondsLeft(turn);
 
   if (secondsLeft <= 0) {
@@ -213,6 +269,7 @@ function renderActiveTurn() {
   on("correct", markCorrect);
   on("skip", markSkipped);
 
+  // Repaint only the timer text every 250ms. Card/scores rerender after button clicks.
   timerId = setInterval(() => {
     const nextSeconds = getSecondsLeft(turn);
     const timer = document.querySelector("[data-timer]");
@@ -223,17 +280,23 @@ function renderActiveTurn() {
 
 function markCorrect() {
   const cardId = state.activeTurn.currentCardId;
+
+  // Correct cards leave the remaining deck permanently for this round.
   state.remainingDeck = state.remainingDeck.filter((id) => id !== cardId);
   state.guessedPile.push(cardId);
+
+  // Update both the active-turn score and the persistent round/total scoreboards.
   state.activeTurn.score += 1;
   state.roundScores[state.round - 1][state.currentTeam] += 1;
   state.totalScores[state.currentTeam] += 1;
 
+  // If the final card was guessed, the round ends immediately instead of waiting.
   if (state.remainingDeck.length === 0) {
     completeRound();
     return;
   }
 
+  // Otherwise the next card is simply the new first card in the remaining deck.
   state.activeTurn.currentCardId = state.remainingDeck[0];
   saveState();
   render();
@@ -241,10 +304,13 @@ function markCorrect() {
 
 function markSkipped() {
   const cardId = state.activeTurn.currentCardId;
+
+  // Skipped cards leave the live deck for now, but return at the end of the turn.
   state.remainingDeck = state.remainingDeck.filter((id) => id !== cardId);
   state.skippedPile.push(cardId);
   state.activeTurn.skipped += 1;
 
+  // If every visible card was skipped, end the turn and recycle the skipped pile.
   if (state.remainingDeck.length === 0) {
     endTurn();
     return;
@@ -257,7 +323,11 @@ function markSkipped() {
 
 function endTurn() {
   clearInterval(timerId);
+
+  // The important Monikers rule: skipped cards come back, then the deck is reshuffled.
   state.remainingDeck = shuffle([...state.remainingDeck, ...state.skippedPile]);
+
+  // Snapshot summary info before switching teams, because the summary screen needs both.
   state.lastTurn = {
     teamName: currentTeam().name,
     score: state.activeTurn?.score || 0,
@@ -266,6 +336,8 @@ function endTurn() {
   };
   state.skippedPile = [];
   state.activeTurn = null;
+
+  // Teams alternate every turn: Team A -> Team B -> Team A -> ...
   state.currentTeam = state.currentTeam === 0 ? 1 : 0;
   state.screen = "turn-summary";
   saveState();
@@ -273,6 +345,7 @@ function endTurn() {
 }
 
 function renderTurnSummary() {
+  // The summary is the pause between teams after the timer runs out.
   app.innerHTML = `
     <section class="screen card-panel center">
       <p class="eyebrow">Time's Up</p>
@@ -284,6 +357,7 @@ function renderTurnSummary() {
   `;
 
   on("next-turn", () => {
+    // Move back to the handoff screen for the next team.
     state.screen = "turn-start";
     saveState();
     render();
@@ -292,8 +366,12 @@ function renderTurnSummary() {
 
 function completeRound() {
   clearInterval(timerId);
+
+  // The deck is empty, so no turn summary is needed. Show round results or final results.
   state.activeTurn = null;
   state.skippedPile = [];
+
+  // Switch the next starting team so turns keep alternating across round boundaries.
   state.currentTeam = state.currentTeam === 0 ? 1 : 0;
   state.screen = state.round >= MAX_ROUNDS ? "game-over" : "round-complete";
   saveState();
@@ -301,6 +379,7 @@ function completeRound() {
 }
 
 function renderRoundComplete() {
+  // Round Complete displays only the round just finished, then starts the next round.
   app.innerHTML = `
     <section class="screen card-panel center">
       <p class="eyebrow">Round Complete</p>
@@ -312,6 +391,8 @@ function renderRoundComplete() {
 
   on("next-round", () => {
     state.round += 1;
+
+    // Rounds 2 and 3 reuse the exact original cards, reshuffled into a fresh deck.
     state.remainingDeck = shuffle([...state.originalDeck]);
     state.guessedPile = [];
     state.skippedPile = [];
@@ -323,6 +404,7 @@ function renderRoundComplete() {
 }
 
 function renderGameOver() {
+  // Winner is calculated from total scores after round 3 completes.
   const winner =
     state.totalScores[0] === state.totalScores[1]
       ? "It is a tie"
@@ -349,6 +431,7 @@ function renderGameOver() {
   `;
 
   on("play-again", () => {
+    // Finished games are cleared so the next setup starts fresh.
     clearState();
     state = { screen: "setup" };
     render();
@@ -356,6 +439,7 @@ function renderGameOver() {
 }
 
 function scoreRows(roundIndex) {
+  // Shared markup for showing one round's Team A / Team B scores.
   return `
     <div class="score-row"><span>${state.teams[0].name}</span><strong>${state.roundScores[roundIndex][0]}</strong></div>
     <div class="score-row"><span>${state.teams[1].name}</span><strong>${state.roundScores[roundIndex][1]}</strong></div>
@@ -363,6 +447,7 @@ function scoreRows(roundIndex) {
 }
 
 function totalRows() {
+  // Shared markup for the final total scoreboard.
   return `
     <div class="score-row"><span>${state.teams[0].name}</span><strong>${state.totalScores[0]}</strong></div>
     <div class="score-row"><span>${state.teams[1].name}</span><strong>${state.totalScores[1]}</strong></div>
@@ -370,24 +455,29 @@ function totalRows() {
 }
 
 function currentTeam() {
+  // Convenience helper so render functions do not repeat state.teams[state.currentTeam].
   return state.teams[state.currentTeam];
 }
 
 function otherTeam() {
+  // Used by turn summaries to show who receives the phone next.
   return state.teams[state.currentTeam === 0 ? 1 : 0];
 }
 
 function getSecondsLeft(turn) {
+  // Timer math is based on actual elapsed wall-clock time.
   const elapsed = Math.floor((Date.now() - turn.startedAt) / 1000);
   return Math.max(0, turn.duration - elapsed);
 }
 
 function on(action, handler) {
+  // Buttons declare data-action="..." in their HTML. This helper binds by that name.
   const element = document.querySelector(`[data-action="${action}"]`);
   if (element) element.addEventListener("click", handler);
 }
 
 function shuffle(items) {
+  // Fisher-Yates shuffle. Used for initial deck selection and skipped-card recycling.
   const copy = [...items];
   for (let index = copy.length - 1; index > 0; index -= 1) {
     const randomIndex = Math.floor(Math.random() * (index + 1));
@@ -397,9 +487,11 @@ function shuffle(items) {
 }
 
 function clean(value) {
+  // Normalize form values before storing team names.
   return String(value || "").trim();
 }
 
 function clamp(value, min, max) {
+  // Keeps numeric setup fields inside safe bounds.
   return Math.min(Math.max(value, min), max);
 }

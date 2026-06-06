@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="./src/styles.css" />
   </head>
   <body>
+    <!--
+      The whole game is rendered into this single element.
+      src/app.js switches the content based on state.screen, which keeps the
+      project GitHub Pages friendly: no router, backend, or build step needed.
+    -->
     <main id="app" class="app-shell" aria-live="polite"></main>
+
+    <!-- The app is loaded as a module so the JavaScript can stay organized. -->
     <script type="module" src="./src/app.js"></script>
   </body>
 </html>

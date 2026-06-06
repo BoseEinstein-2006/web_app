@@ -1,3 +1,4 @@
+/* Design tokens: these variables define the whole visual personality of the app. */
 :root {
   --ink: #201a12;
   --paper: #fff7de;
@@ -9,6 +10,7 @@
   --shadow: 0 24px 70px rgba(32, 26, 18, 0.22);
 }
 
+/* Predictable sizing makes the mobile layout easier to reason about. */
 * {
   box-sizing: border-box;
 }
@@ -22,6 +24,7 @@ body {
   margin: 0;
   color: var(--ink);
   font-family: Georgia, "Times New Roman", serif;
+  /* Layered gradients give the static page a playful table-top party-game feel. */
   background:
     radial-gradient(circle at 20% 10%, rgba(240, 107, 79, 0.35), transparent 28rem),
     radial-gradient(circle at 80% 0%, rgba(96, 199, 160, 0.42), transparent 24rem),
@@ -30,6 +33,7 @@ body {
 
 button,
 input {
+  /* Form controls inherit the expressive serif font instead of browser defaults. */
   font: inherit;
 }
 
@@ -43,6 +47,7 @@ button {
   letter-spacing: 0.02em;
   cursor: pointer;
   box-shadow: 0 12px 28px rgba(32, 26, 18, 0.18);
+  /* Buttons depress slightly on tap, which feels good on phones. */
   transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
@@ -66,6 +71,7 @@ input:focus {
 }
 
 .app-shell {
+  /* Every screen is centered in the one-page app shell. */
   display: grid;
   min-height: 100svh;
   padding: 1rem;
@@ -73,11 +79,13 @@ input:focus {
 }
 
 .screen {
+  /* 32rem keeps the phone-first UI readable on larger desktop windows. */
   width: min(100%, 32rem);
   animation: rise-in 420ms ease both;
 }
 
 .hero {
+  /* Home screen fills the phone and centers the title/buttons vertically. */
   display: grid;
   min-height: calc(100svh - 2rem);
   align-content: center;
@@ -88,6 +96,7 @@ input:focus {
 
 .card-panel,
 .play-screen {
+  /* Shared card-like surface used by setup, summaries, and active play. */
   border: 2px solid rgba(32, 26, 18, 0.1);
   border-radius: 34px;
   padding: clamp(1.25rem, 5vw, 2rem);
@@ -102,6 +111,7 @@ input:focus {
 
 .eyebrow,
 .round-label {
+  /* Small uppercase labels orient the player without stealing focus. */
   margin: 0 0 0.45rem;
   color: var(--tomato);
   font-family: Verdana, Geneva, sans-serif;
@@ -119,6 +129,7 @@ p {
 }
 
 h1 {
+  /* The title is intentionally oversized for a bold board-game-box feel. */
   margin-bottom: 0;
   font-size: clamp(4.2rem, 18vw, 7.4rem);
   line-height: 0.82;
@@ -146,6 +157,7 @@ h3 {
 
 .button-stack,
 .setup-form {
+  /* Stacked controls work better than columns on narrow screens. */
   display: grid;
   gap: 0.8rem;
 }
@@ -176,6 +188,7 @@ h3 {
 }
 
 .play-screen {
+  /* Active turn needs full-height spacing: round/team at top, actions at bottom. */
   display: grid;
   min-height: calc(100svh - 2rem);
   gap: 1rem;
@@ -186,6 +199,7 @@ h3 {
 }
 
 .top-row {
+  /* Compact scoreboard strip during play. */
   display: flex;
   justify-content: space-between;
   color: var(--navy);
@@ -196,6 +210,7 @@ h3 {
 }
 
 .timer {
+  /* Circular timer gives the clue giver an instant visual countdown target. */
   display: grid;
   width: min(42vw, 10rem);
   aspect-ratio: 1;
@@ -211,6 +226,7 @@ h3 {
 }
 
 .current-card {
+  /* The current card dominates the screen so it is readable at arm's length. */
   display: grid;
   min-height: 34svh;
   place-items: center;
@@ -226,6 +242,7 @@ h3 {
 }
 
 .action-grid {
+  /* Correct and Skip sit side by side for fast thumb access. */
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.8rem;
@@ -242,6 +259,7 @@ h3 {
 
 .score-board,
 .score-block {
+  /* Score screens are simple stacked blocks for quick pass-the-phone reading. */
   display: grid;
   gap: 0.7rem;
 }
@@ -273,6 +291,7 @@ h3 {
 }
 
 @keyframes rise-in {
+  /* A tiny entrance animation makes screen changes feel intentional, not jumpy. */
   from {
     opacity: 0;
     transform: translateY(18px) scale(0.98);
@@ -285,6 +304,7 @@ h3 {
 }
 
 @media (min-width: 680px) {
+  /* On larger screens, add breathing room while preserving the mobile-shaped app. */
   .app-shell {
     padding: 2rem;
   }
