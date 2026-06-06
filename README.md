@@ -9,13 +9,13 @@ https://boseeinstein-2006.github.io/web_app/
 
 The app is intentionally simple: `index.html` contains one empty `<main id="app">`, and `src/app.js` fills that element with the current screen. There is no router library. Instead, the app stores the current screen name in `state.screen`, then the central `render()` function calls the matching screen renderer.
 
-The complete game is stored in one serializable `state` object. That state includes the current round, team names, team sizes, current team, remaining deck, guessed pile, skipped pile, round scores, total scores, current turn information, and last turn summary. After every meaningful action, `saveState()` writes this object to browser `localStorage`, which is why refreshing or closing the browser can restore the game.
+The complete game is stored in one serializable `state` object. That state includes the current round, team names, current team, remaining deck, guessed pile, skipped pile, round scores, total scores, current turn information, and last turn summary. After every meaningful action, `saveState()` writes this object to browser `localStorage`, which is why refreshing or closing the browser can restore the game.
 
 The card database lives in `public/cards.json`. When a new game starts, `loadCards()` loads the JSON file, the setup form chooses a random subset of cards, and the app stores the selected card ids in `originalDeck`. The `originalDeck` is never modified, so rounds 2 and 3 can reuse the exact same cards with a fresh shuffle.
 
 ## Features
 
-- New game setup for two teams, player counts, and deck size.
+- New game setup for two team names and deck size.
 - Built-in card database loaded from `public/cards.json`.
 - Three-round party-card flow with alternating team turns.
 - 60-second turns with Correct and Skip actions.
@@ -64,10 +64,8 @@ When `state.screen` is `"setup"`, `render()` calls `renderSetup()`.
 
 `renderSetup()` displays these fields:
 
-- `Team 1 Name`, default `Team A`.
-- `Team 1 Players`, default `3`.
-- `Team 2 Name`, default `Team B`.
-- `Team 2 Players`, default `3`.
+- `Team 1 Name`, default `Писи`.
+- `Team 2 Name`, default `Сиси`.
 - `Cards In Deck`, default `40`.
 
 When the setup form is submitted, the submit handler reads the form with `FormData`, clamps the deck size to a valid number, shuffles all cards, and selects the requested number of cards.
@@ -76,7 +74,7 @@ Then it creates the full initial game state. Important fields include:
 
 - `screen: "turn-start"` so the next render opens the turn handoff screen.
 - `round: 1` because every game starts at round 1.
-- `currentTeam: 0` because Team A starts.
+- `currentTeam: 0` because the first team starts.
 - `originalDeck` containing the selected card ids for all three rounds.
 - `remainingDeck` containing a shuffled copy of the selected cards for the current round.
 - `guessedPile` and `skippedPile`, both starting empty.
@@ -180,7 +178,7 @@ Important saved fields include:
 
 - Current screen.
 - Current round.
-- Team names and player counts.
+- Team names.
 - Current team.
 - Remaining deck.
 - Guessed pile.
@@ -197,14 +195,14 @@ When the app starts, `loadState()` checks localStorage. If a saved game exists, 
 Browsers sometimes cache static GitHub Pages files aggressively. To make updates easier to see, `index.html` defines:
 
 ```js
-window.APP_VERSION = "2026-06-06-14";
+window.APP_VERSION = "2026-06-06-15";
 ```
 
 The same version is added to the CSS and JavaScript URLs:
 
 ```html
-./src/styles.css?v=2026-06-06-14
-./src/app.js?v=2026-06-06-14
+./src/styles.css?v=2026-06-06-15
+./src/app.js?v=2026-06-06-15
 ```
 
 When this version changes, the browser treats the files as new URLs and requests fresh copies from GitHub Pages.

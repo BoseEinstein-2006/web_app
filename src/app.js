@@ -196,8 +196,8 @@ function renderSetup() {
       screen: "turn-start",
       round: 1,
       teams: [
-        { name: clean(form.get("teamA")) || "Команда А" },
-        { name: clean(form.get("teamB")) || "Команда Б" },
+        { name: clean(form.get("teamA")) || "Писи" },
+        { name: clean(form.get("teamB")) || "Сиси" },
       ],
       currentTeam: 0,
 
@@ -229,8 +229,8 @@ function renderSetup() {
 
 function getSetupDefaults() {
   return {
-    teamA: state?.teams?.[0]?.name || "Команда А",
-    teamB: state?.teams?.[1]?.name || "Команда Б",
+    teamA: state?.teams?.[0]?.name || "Писи",
+    teamB: state?.teams?.[1]?.name || "Сиси",
     deckSize: state?.originalDeck?.length || 40,
   };
 }
