@@ -2,12 +2,12 @@
 // There is no backend: every screen, score, deck update, and resume action is local.
 
 // localStorage key used to persist and resume an unfinished game.
-const STORAGE_KEY = "monikers-game-state-v1";
+const STORAGE_KEY = "party-card-game-state-v1";
 
 // The spec asks for timed turns; changing this value adjusts all turns at once.
 const TURN_SECONDS = 60;
 
-// Monikers has three rounds using the same deck with different clue rules.
+// The game has three rounds using the same deck with different clue rules.
 const MAX_ROUNDS = 3;
 
 // #app is the only DOM mount point. render() replaces its contents per screen.
@@ -96,7 +96,7 @@ function renderHome() {
   app.innerHTML = `
     <section class="screen hero">
       <p class="eyebrow">Pass-and-play party chaos</p>
-      <h1>MONIKERS</h1>
+      <h1>PARTY CARDS</h1>
       <p class="lede">One phone. Two teams. Three rounds of increasingly questionable clues.</p>
       <div class="button-stack">
         <button class="primary" data-action="new-game">New Game</button>
@@ -324,7 +324,7 @@ function markSkipped() {
 function endTurn() {
   clearInterval(timerId);
 
-  // The important Monikers rule: skipped cards come back, then the deck is reshuffled.
+  // The important deck rule: skipped cards come back, then the deck is reshuffled.
   state.remainingDeck = shuffle([...state.remainingDeck, ...state.skippedPile]);
 
   // Snapshot summary info before switching teams, because the summary screen needs both.

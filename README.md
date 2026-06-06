@@ -1,9 +1,9 @@
-# Monikers Web App
+# Web App
 
-A mobile-friendly pass-and-play Monikers app for one shared phone. The app is a static single page application, so it can run on GitHub Pages without a backend, build server, user accounts, or API.
+A mobile-friendly pass-and-play party card app for one shared phone. The app is a static single page application, so it can run on GitHub Pages without a backend, build server, user accounts, or API.
 
 Click on the link to play:
-https://boseeinstein-2006.github.io/2_Monikers_web_app/
+https://boseeinstein-2006.github.io/web_app/
 
 ## General Overview
 
@@ -17,7 +17,7 @@ The card database lives in `public/cards.json`. When a new game starts, `loadCar
 
 - New game setup for two teams, player counts, and deck size.
 - Built-in card database loaded from `public/cards.json`.
-- Three-round Monikers flow with alternating team turns.
+- Three-round party-card flow with alternating team turns.
 - 60-second turns with Correct and Skip actions.
 - Skipped cards return to the remaining deck at the end of each turn.
 - Scores are tracked per round and in total.
@@ -29,7 +29,7 @@ The card database lives in `public/cards.json`. When a new game starts, `loadCar
 - `index.html` is the static GitHub Pages entry point and loads the CSS and JavaScript.
 - `src/app.js` contains the full game state, screen rendering, timer logic, deck movement, scoring, and localStorage persistence.
 - `src/styles.css` contains the mobile-first layout and visual design.
-- `public/cards.json` contains the built-in Monikers card database.
+- `public/cards.json` contains the built-in party-card database.
 - `package.json` only provides project metadata and a simple local preview command.
 
 ## Screen And Function Flow
@@ -46,7 +46,7 @@ Before `init()` runs, the app also calls `loadState()`. If there is a saved loca
 
 If `state` is `null`, `render()` calls `renderHome()`.
 
-`renderHome()` displays the title `MONIKERS`, the `New Game` button, and, if localStorage contains a saved game, the `Resume Game` button.
+`renderHome()` displays the title `PARTY CARDS`, the `New Game` button, and, if localStorage contains a saved game, the `Resume Game` button.
 
 If the user clicks `New Game`, the click handler sets:
 
@@ -174,7 +174,7 @@ At the start of rounds 2 and 3:
 
 ## Persistence Logic
 
-The app calls `saveState()` after every action that changes the game. This writes the whole `state` object to localStorage using the key `monikers-game-state-v1`.
+The app calls `saveState()` after every action that changes the game. This writes the whole `state` object to localStorage using the key `party-card-game-state-v1`.
 
 Important saved fields include:
 
