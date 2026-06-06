@@ -307,7 +307,7 @@ h3 {
   border-radius: 30px;
   padding: 1.2rem;
   background: var(--cream);
-  font-size: clamp(2.35rem, 13vw, 5.2rem);
+  font-size: clamp(1.85rem, 9.5vw, 4rem);
   font-weight: 900;
   line-height: 0.94;
   text-align: center;

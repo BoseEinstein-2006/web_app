@@ -1,0 +1,3337 @@
+[
+  {
+    "id": 1,
+    "name": "Поле чудес",
+    "category": "TV"
+  },
+  {
+    "id": 2,
+    "name": "Кто хочет стать миллионером?",
+    "category": "TV"
+  },
+  {
+    "id": 3,
+    "name": "Что? Где? Когда?",
+    "category": "TV"
+  },
+  {
+    "id": 4,
+    "name": "КВН",
+    "category": "TV"
+  },
+  {
+    "id": 5,
+    "name": "Последний герой",
+    "category": "TV"
+  },
+  {
+    "id": 6,
+    "name": "Форт Боярд",
+    "category": "TV"
+  },
+  {
+    "id": 7,
+    "name": "Городок",
+    "category": "TV"
+  },
+  {
+    "id": 8,
+    "name": "Камеди Клаб",
+    "category": "TV"
+  },
+  {
+    "id": 9,
+    "name": "Спокойной ночи, малыши!",
+    "category": "TV"
+  },
+  {
+    "id": 10,
+    "name": "Ералаш",
+    "category": "TV"
+  },
+  {
+    "id": 11,
+    "name": "Дом-2",
+    "category": "TV"
+  },
+  {
+    "id": 12,
+    "name": "Моя прекрасная няня",
+    "category": "TV"
+  },
+  {
+    "id": 13,
+    "name": "Папины дочки",
+    "category": "TV"
+  },
+  {
+    "id": 14,
+    "name": "Интерны",
+    "category": "TV"
+  },
+  {
+    "id": 15,
+    "name": "Солдаты",
+    "category": "TV"
+  },
+  {
+    "id": 16,
+    "name": "Реальные пацаны",
+    "category": "TV"
+  },
+  {
+    "id": 17,
+    "name": "Счастливы вместе",
+    "category": "TV"
+  },
+  {
+    "id": 18,
+    "name": "Ходячие мертвецы",
+    "category": "TV"
+  },
+  {
+    "id": 19,
+    "name": "Во все тяжкие",
+    "category": "TV"
+  },
+  {
+    "id": 20,
+    "name": "Черное зеркало",
+    "category": "TV"
+  },
+  {
+    "id": 21,
+    "name": "Брат",
+    "category": "Movies"
+  },
+  {
+    "id": 22,
+    "name": "Брат 2",
+    "category": "Movies"
+  },
+  {
+    "id": 23,
+    "name": "Бригада",
+    "category": "Movies"
+  },
+  {
+    "id": 24,
+    "name": "Титаник",
+    "category": "Movies"
+  },
+  {
+    "id": 25,
+    "name": "Матрица",
+    "category": "Movies"
+  },
+  {
+    "id": 26,
+    "name": "Властелин колец",
+    "category": "Movies"
+  },
+  {
+    "id": 27,
+    "name": "Звёздные войны",
+    "category": "Movies"
+  },
+  {
+    "id": 28,
+    "name": "Гарри Поттер",
+    "category": "Movies"
+  },
+  {
+    "id": 29,
+    "name": "Назад в будущее",
+    "category": "Movies"
+  },
+  {
+    "id": 30,
+    "name": "Один дома",
+    "category": "Movies"
+  },
+  {
+    "id": 31,
+    "name": "Шрек",
+    "category": "Movies"
+  },
+  {
+    "id": 32,
+    "name": "Ну, погоди!",
+    "category": "Movies"
+  },
+  {
+    "id": 33,
+    "name": "Простоквашино",
+    "category": "Movies"
+  },
+  {
+    "id": 34,
+    "name": "Симпсоны",
+    "category": "Movies"
+  },
+  {
+    "id": 35,
+    "name": "Футурама",
+    "category": "Movies"
+  },
+  {
+    "id": 36,
+    "name": "Игра престолов",
+    "category": "Movies"
+  },
+  {
+    "id": 37,
+    "name": "Друзья",
+    "category": "Movies"
+  },
+  {
+    "id": 38,
+    "name": "Секретные материалы",
+    "category": "Movies"
+  },
+  {
+    "id": 39,
+    "name": "Ведьмак",
+    "category": "Movies"
+  },
+  {
+    "id": 40,
+    "name": "Дюна",
+    "category": "Movies"
+  },
+  {
+    "id": 41,
+    "name": "Зеленая миля",
+    "category": "Movies"
+  },
+  {
+    "id": 42,
+    "name": "Бойцовский клуб",
+    "category": "Movies"
+  },
+  {
+    "id": 43,
+    "name": "Криминальное чтиво",
+    "category": "Movies"
+  },
+  {
+    "id": 44,
+    "name": "Аватар",
+    "category": "Movies"
+  },
+  {
+    "id": 45,
+    "name": "Интерстеллар",
+    "category": "Movies"
+  },
+  {
+    "id": 46,
+    "name": "Ирония судьбы",
+    "category": "Movies"
+  },
+  {
+    "id": 47,
+    "name": "Приключения Шурика",
+    "category": "Movies"
+  },
+  {
+    "id": 48,
+    "name": "Данила Багров",
+    "category": "Chars"
+  },
+  {
+    "id": 49,
+    "name": "Саша Белый",
+    "category": "Chars"
+  },
+  {
+    "id": 50,
+    "name": "Штирлиц",
+    "category": "Chars"
+  },
+  {
+    "id": 51,
+    "name": "Гена Букин",
+    "category": "Chars"
+  },
+  {
+    "id": 52,
+    "name": "Доктор Хаус",
+    "category": "Chars"
+  },
+  {
+    "id": 53,
+    "name": "Джек Воробей",
+    "category": "Chars"
+  },
+  {
+    "id": 54,
+    "name": "Дарт Вейдер",
+    "category": "Chars"
+  },
+  {
+    "id": 55,
+    "name": "Йода",
+    "category": "Chars"
+  },
+  {
+    "id": 56,
+    "name": "Гермиона Грейнджер",
+    "category": "Chars"
+  },
+  {
+    "id": 57,
+    "name": "Фродо Бэггинс",
+    "category": "Chars"
+  },
+  {
+    "id": 58,
+    "name": "Терминатор",
+    "category": "Chars"
+  },
+  {
+    "id": 59,
+    "name": "Форрест Гамп",
+    "category": "Chars"
+  },
+  {
+    "id": 60,
+    "name": "Чебурашка",
+    "category": "Chars"
+  },
+  {
+    "id": 61,
+    "name": "Карлсон",
+    "category": "Chars"
+  },
+  {
+    "id": 62,
+    "name": "Винни-Пух",
+    "category": "Chars"
+  },
+  {
+    "id": 63,
+    "name": "Бэтмен",
+    "category": "Chars"
+  },
+  {
+    "id": 64,
+    "name": "Человек-паук",
+    "category": "Chars"
+  },
+  {
+    "id": 65,
+    "name": "Джокер",
+    "category": "Chars"
+  },
+  {
+    "id": 66,
+    "name": "Уолтер Уайт",
+    "category": "Chars"
+  },
+  {
+    "id": 67,
+    "name": "Тони Старк",
+    "category": "Chars"
+  },
+  {
+    "id": 68,
+    "name": "Шерлок",
+    "category": "Chars"
+  },
+  {
+    "id": 69,
+    "name": "Джон Сноу",
+    "category": "Chars"
+  },
+  {
+    "id": 70,
+    "name": "Пабло Эскобар",
+    "category": "Chars"
+  },
+  {
+    "id": 71,
+    "name": "Леон",
+    "category": "Chars"
+  },
+  {
+    "id": 72,
+    "name": "Дядя Фёдор",
+    "category": "Chars"
+  },
+  {
+    "id": 73,
+    "name": "Голлум",
+    "category": "Chars"
+  },
+  {
+    "id": 74,
+    "name": "Ганнибал Лектер",
+    "category": "Chars"
+  },
+  {
+    "id": 75,
+    "name": "Остап Бендер",
+    "category": "Chars"
+  },
+  {
+    "id": 76,
+    "name": "Воланд",
+    "category": "Chars"
+  },
+  {
+    "id": 77,
+    "name": "Кот Бегемот",
+    "category": "Chars"
+  },
+  {
+    "id": 78,
+    "name": "Раскольников",
+    "category": "Chars"
+  },
+  {
+    "id": 79,
+    "name": "Пьер Безухов",
+    "category": "Chars"
+  },
+  {
+    "id": 80,
+    "name": "Анна Каренина",
+    "category": "Chars"
+  },
+  {
+    "id": 81,
+    "name": "Шерлок Холмс",
+    "category": "Chars"
+  },
+  {
+    "id": 82,
+    "name": "Доктор Ватсон",
+    "category": "Chars"
+  },
+  {
+    "id": 83,
+    "name": "Дон Кихот",
+    "category": "Chars"
+  },
+  {
+    "id": 84,
+    "name": "Д'Артаньян",
+    "category": "Chars"
+  },
+  {
+    "id": 85,
+    "name": "Алиса",
+    "category": "Chars"
+  },
+  {
+    "id": 86,
+    "name": "Гулливер",
+    "category": "Chars"
+  },
+  {
+    "id": 87,
+    "name": "Робинзон Крузо",
+    "category": "Chars"
+  },
+  {
+    "id": 88,
+    "name": "Бильбо Бэггинс",
+    "category": "Chars"
+  },
+  {
+    "id": 89,
+    "name": "Гэндальф",
+    "category": "Chars"
+  },
+  {
+    "id": 90,
+    "name": "Геральт",
+    "category": "Chars"
+  },
+  {
+    "id": 91,
+    "name": "Маленький принц",
+    "category": "Chars"
+  },
+  {
+    "id": 92,
+    "name": "Незнайка",
+    "category": "Chars"
+  },
+  {
+    "id": 93,
+    "name": "Буратино",
+    "category": "Chars"
+  },
+  {
+    "id": 94,
+    "name": "Маугли",
+    "category": "Chars"
+  },
+  {
+    "id": 95,
+    "name": "Базаров",
+    "category": "Chars"
+  },
+  {
+    "id": 96,
+    "name": "Чичиков",
+    "category": "Chars"
+  },
+  {
+    "id": 97,
+    "name": "Хоттабыч",
+    "category": "Chars"
+  },
+  {
+    "id": 98,
+    "name": "Пиноккио",
+    "category": "Chars"
+  },
+  {
+    "id": 99,
+    "name": "Мастер и Маргарита",
+    "category": "Books"
+  },
+  {
+    "id": 100,
+    "name": "Преступление и наказание",
+    "category": "Books"
+  },
+  {
+    "id": 101,
+    "name": "Война и мир",
+    "category": "Books"
+  },
+  {
+    "id": 102,
+    "name": "Двенадцать стульев",
+    "category": "Books"
+  },
+  {
+    "id": 103,
+    "name": "Золотой телёнок",
+    "category": "Books"
+  },
+  {
+    "id": 104,
+    "name": "Хоббит",
+    "category": "Books"
+  },
+  {
+    "id": 105,
+    "name": "Пикник на обочине",
+    "category": "Books"
+  },
+  {
+    "id": 106,
+    "name": "Трудно быть богом",
+    "category": "Books"
+  },
+  {
+    "id": 107,
+    "name": "451 градус по Фаренгейту",
+    "category": "Books"
+  },
+  {
+    "id": 108,
+    "name": "1984",
+    "category": "Books"
+  },
+  {
+    "id": 109,
+    "name": "Три мушкетёра",
+    "category": "Books"
+  },
+  {
+    "id": 110,
+    "name": "Алиса в Стране чудес",
+    "category": "Books"
+  },
+  {
+    "id": 111,
+    "name": "Тихий Дон",
+    "category": "Books"
+  },
+  {
+    "id": 112,
+    "name": "Мёртвые души",
+    "category": "Books"
+  },
+  {
+    "id": 113,
+    "name": "Собачье сердце",
+    "category": "Books"
+  },
+  {
+    "id": 114,
+    "name": "Идиот",
+    "category": "Books"
+  },
+  {
+    "id": 115,
+    "name": "Отцы и дети",
+    "category": "Books"
+  },
+  {
+    "id": 116,
+    "name": "Граф Монте-Кристо",
+    "category": "Books"
+  },
+  {
+    "id": 117,
+    "name": "Скотный двор",
+    "category": "Books"
+  },
+  {
+    "id": 118,
+    "name": "Сто лет одиночества",
+    "category": "Books"
+  },
+  {
+    "id": 119,
+    "name": "Портрет Дориана Грея",
+    "category": "Books"
+  },
+  {
+    "id": 120,
+    "name": "Атлант расправил плечи",
+    "category": "Books"
+  },
+  {
+    "id": 121,
+    "name": "Кино",
+    "category": "Music"
+  },
+  {
+    "id": 122,
+    "name": "Виктор Цой",
+    "category": "Music"
+  },
+  {
+    "id": 123,
+    "name": "Сектор Газа",
+    "category": "Music"
+  },
+  {
+    "id": 124,
+    "name": "Король и Шут",
+    "category": "Music"
+  },
+  {
+    "id": 125,
+    "name": "Земфира",
+    "category": "Music"
+  },
+  {
+    "id": 126,
+    "name": "Руки Вверх!",
+    "category": "Music"
+  },
+  {
+    "id": 127,
+    "name": "Иванушки International",
+    "category": "Music"
+  },
+  {
+    "id": 128,
+    "name": "Ленинград",
+    "category": "Music"
+  },
+  {
+    "id": 129,
+    "name": "ДДТ",
+    "category": "Music"
+  },
+  {
+    "id": 130,
+    "name": "Алла Пугачёва",
+    "category": "Music"
+  },
+  {
+    "id": 131,
+    "name": "Филипп Киркоров",
+    "category": "Music"
+  },
+  {
+    "id": 132,
+    "name": "Верка Сердючка",
+    "category": "Music"
+  },
+  {
+    "id": 133,
+    "name": "Децл",
+    "category": "Music"
+  },
+  {
+    "id": 134,
+    "name": "Тату",
+    "category": "Music"
+  },
+  {
+    "id": 135,
+    "name": "Rammstein",
+    "category": "Music"
+  },
+  {
+    "id": 136,
+    "name": "Eminem",
+    "category": "Music"
+  },
+  {
+    "id": 137,
+    "name": "Nirvana",
+    "category": "Music"
+  },
+  {
+    "id": 138,
+    "name": "Queen",
+    "category": "Music"
+  },
+  {
+    "id": 139,
+    "name": "Michael Jackson",
+    "category": "Music"
+  },
+  {
+    "id": 140,
+    "name": "Britney Spears",
+    "category": "Music"
+  },
+  {
+    "id": 141,
+    "name": "Ария",
+    "category": "Music"
+  },
+  {
+    "id": 142,
+    "name": "Грибы",
+    "category": "Music"
+  },
+  {
+    "id": 143,
+    "name": "Моргенштерн",
+    "category": "Music"
+  },
+  {
+    "id": 144,
+    "name": "Скриптонит",
+    "category": "Music"
+  },
+  {
+    "id": 145,
+    "name": "Radiohead",
+    "category": "Music"
+  },
+  {
+    "id": 146,
+    "name": "Linkin Park",
+    "category": "Music"
+  },
+  {
+    "id": 147,
+    "name": "Metallica",
+    "category": "Music"
+  },
+  {
+    "id": 148,
+    "name": "AC/DC",
+    "category": "Music"
+  },
+  {
+    "id": 149,
+    "name": "The Beatles",
+    "category": "Music"
+  },
+  {
+    "id": 150,
+    "name": "Илон Маск",
+    "category": "Celebs"
+  },
+  {
+    "id": 151,
+    "name": "Арнольд Шварценеггер",
+    "category": "Celebs"
+  },
+  {
+    "id": 152,
+    "name": "Джеки Чан",
+    "category": "Celebs"
+  },
+  {
+    "id": 153,
+    "name": "Брюс Уиллис",
+    "category": "Celebs"
+  },
+  {
+    "id": 154,
+    "name": "Джим Керри",
+    "category": "Celebs"
+  },
+  {
+    "id": 155,
+    "name": "Леонардо ДиКаприо",
+    "category": "Celebs"
+  },
+  {
+    "id": 156,
+    "name": "Киану Ривз",
+    "category": "Celebs"
+  },
+  {
+    "id": 157,
+    "name": "Моника Беллуччи",
+    "category": "Celebs"
+  },
+  {
+    "id": 158,
+    "name": "Анджелина Джоли",
+    "category": "Celebs"
+  },
+  {
+    "id": 159,
+    "name": "Брэд Питт",
+    "category": "Celebs"
+  },
+  {
+    "id": 160,
+    "name": "Джонни Депп",
+    "category": "Celebs"
+  },
+  {
+    "id": 161,
+    "name": "Дима Билан",
+    "category": "Celebs"
+  },
+  {
+    "id": 162,
+    "name": "Николай Басков",
+    "category": "Celebs"
+  },
+  {
+    "id": 163,
+    "name": "Тимати",
+    "category": "Celebs"
+  },
+  {
+    "id": 164,
+    "name": "Ксения Собчак",
+    "category": "Celebs"
+  },
+  {
+    "id": 165,
+    "name": "Ольга Бузова",
+    "category": "Celebs"
+  },
+  {
+    "id": 166,
+    "name": "Борат",
+    "category": "Celebs"
+  },
+  {
+    "id": 167,
+    "name": "Мистер Бин",
+    "category": "Celebs"
+  },
+  {
+    "id": 168,
+    "name": "Жерар Депардье",
+    "category": "Celebs"
+  },
+  {
+    "id": 169,
+    "name": "Наполеон",
+    "category": "History"
+  },
+  {
+    "id": 170,
+    "name": "Юлий Цезарь",
+    "category": "History"
+  },
+  {
+    "id": 171,
+    "name": "Клеопатра",
+    "category": "History"
+  },
+  {
+    "id": 172,
+    "name": "Александр Македонский",
+    "category": "History"
+  },
+  {
+    "id": 173,
+    "name": "Чингисхан",
+    "category": "History"
+  },
+  {
+    "id": 174,
+    "name": "Иван Грозный",
+    "category": "History"
+  },
+  {
+    "id": 175,
+    "name": "Пётр Первый",
+    "category": "History"
+  },
+  {
+    "id": 176,
+    "name": "Екатерина Вторая",
+    "category": "History"
+  },
+  {
+    "id": 177,
+    "name": "Ленин",
+    "category": "History"
+  },
+  {
+    "id": 178,
+    "name": "Сталин",
+    "category": "History"
+  },
+  {
+    "id": 179,
+    "name": "Горбачёв",
+    "category": "History"
+  },
+  {
+    "id": 180,
+    "name": "Ельцин",
+    "category": "History"
+  },
+  {
+    "id": 181,
+    "name": "Черчилль",
+    "category": "History"
+  },
+  {
+    "id": 182,
+    "name": "Рузвельт",
+    "category": "History"
+  },
+  {
+    "id": 183,
+    "name": "Авраам Линкольн",
+    "category": "History"
+  },
+  {
+    "id": 184,
+    "name": "Жанна д'Арк",
+    "category": "History"
+  },
+  {
+    "id": 185,
+    "name": "Махатма Ганди",
+    "category": "History"
+  },
+  {
+    "id": 186,
+    "name": "Нельсон Мандела",
+    "category": "History"
+  },
+  {
+    "id": 187,
+    "name": "Мартин Лютер Кинг",
+    "category": "History"
+  },
+  {
+    "id": 188,
+    "name": "Колумб",
+    "category": "History"
+  },
+  {
+    "id": 189,
+    "name": "Порошенко",
+    "category": "History"
+  },
+  {
+    "id": 190,
+    "name": "Распутин",
+    "category": "History"
+  },
+  {
+    "id": 191,
+    "name": "Николай II",
+    "category": "History"
+  },
+  {
+    "id": 192,
+    "name": "Хрущёв",
+    "category": "History"
+  },
+  {
+    "id": 193,
+    "name": "Брежнев",
+    "category": "History"
+  },
+  {
+    "id": 194,
+    "name": "Гитлер",
+    "category": "History"
+  },
+  {
+    "id": 195,
+    "name": "Мао Цзэдун",
+    "category": "History"
+  },
+  {
+    "id": 196,
+    "name": "Карл Маркс",
+    "category": "History"
+  },
+  {
+    "id": 197,
+    "name": "Спартак",
+    "category": "History"
+  },
+  {
+    "id": 198,
+    "name": "Марко Поло",
+    "category": "History"
+  },
+  {
+    "id": 199,
+    "name": "Нострадамус",
+    "category": "History"
+  },
+  {
+    "id": 200,
+    "name": "Казанова",
+    "category": "History"
+  },
+  {
+    "id": 201,
+    "name": "Ванга",
+    "category": "History"
+  },
+  {
+    "id": 202,
+    "name": "Альберт Эйнштейн",
+    "category": "Science"
+  },
+  {
+    "id": 203,
+    "name": "Исаак Ньютон",
+    "category": "Science"
+  },
+  {
+    "id": 204,
+    "name": "Никола Тесла",
+    "category": "Science"
+  },
+  {
+    "id": 205,
+    "name": "Дмитрий Менделеев",
+    "category": "Science"
+  },
+  {
+    "id": 206,
+    "name": "Мария Кюри",
+    "category": "Science"
+  },
+  {
+    "id": 207,
+    "name": "Галилео Галилей",
+    "category": "Science"
+  },
+  {
+    "id": 208,
+    "name": "Чарльз Дарвин",
+    "category": "Science"
+  },
+  {
+    "id": 209,
+    "name": "Стивен Хокинг",
+    "category": "Science"
+  },
+  {
+    "id": 210,
+    "name": "Леонардо да Винчи",
+    "category": "Science"
+  },
+  {
+    "id": 211,
+    "name": "Томас Эдисон",
+    "category": "Science"
+  },
+  {
+    "id": 212,
+    "name": "Александр Белл",
+    "category": "Science"
+  },
+  {
+    "id": 213,
+    "name": "Сергей Королёв",
+    "category": "Science"
+  },
+  {
+    "id": 214,
+    "name": "Юрий Гагарин",
+    "category": "Science"
+  },
+  {
+    "id": 215,
+    "name": "Константин Циолковский",
+    "category": "Science"
+  },
+  {
+    "id": 216,
+    "name": "Алан Тьюринг",
+    "category": "Science"
+  },
+  {
+    "id": 217,
+    "name": "Билл Гейтс",
+    "category": "Science"
+  },
+  {
+    "id": 218,
+    "name": "Стив Джобс",
+    "category": "Science"
+  },
+  {
+    "id": 219,
+    "name": "Архимед",
+    "category": "Science"
+  },
+  {
+    "id": 220,
+    "name": "Пифагор",
+    "category": "Science"
+  },
+  {
+    "id": 221,
+    "name": "Ломоносов",
+    "category": "Science"
+  },
+  {
+    "id": 222,
+    "name": "Сахаров",
+    "category": "Science"
+  },
+  {
+    "id": 223,
+    "name": "Гиппократ",
+    "category": "Science"
+  },
+  {
+    "id": 224,
+    "name": "Роберт Оппенгеймер",
+    "category": "Science"
+  },
+  {
+    "id": 225,
+    "name": "Лионель Месси",
+    "category": "Sports"
+  },
+  {
+    "id": 226,
+    "name": "Криштиану Роналду",
+    "category": "Sports"
+  },
+  {
+    "id": 227,
+    "name": "Майкл Джордан",
+    "category": "Sports"
+  },
+  {
+    "id": 228,
+    "name": "Майк Тайсон",
+    "category": "Sports"
+  },
+  {
+    "id": 229,
+    "name": "Мухаммед Али",
+    "category": "Sports"
+  },
+  {
+    "id": 230,
+    "name": "Усэйн Болт",
+    "category": "Sports"
+  },
+  {
+    "id": 231,
+    "name": "Серена Уильямс",
+    "category": "Sports"
+  },
+  {
+    "id": 232,
+    "name": "Роджер Федерер",
+    "category": "Sports"
+  },
+  {
+    "id": 233,
+    "name": "Михаэль Шумахер",
+    "category": "Sports"
+  },
+  {
+    "id": 234,
+    "name": "Конор Макгрегор",
+    "category": "Sports"
+  },
+  {
+    "id": 235,
+    "name": "Хабиб Нурмагомедов",
+    "category": "Sports"
+  },
+  {
+    "id": 236,
+    "name": "Братья Кличко",
+    "category": "Sports"
+  },
+  {
+    "id": 237,
+    "name": "Гном гномыч",
+    "category": "Sports"
+  },
+  {
+    "id": 238,
+    "name": "Пеле",
+    "category": "Sports"
+  },
+  {
+    "id": 239,
+    "name": "Марадона",
+    "category": "Sports"
+  },
+  {
+    "id": 240,
+    "name": "Зинедин Зидан",
+    "category": "Sports"
+  },
+  {
+    "id": 241,
+    "name": "Тайгер Вудс",
+    "category": "Sports"
+  },
+  {
+    "id": 242,
+    "name": "Майкл Фелпс",
+    "category": "Sports"
+  },
+  {
+    "id": 243,
+    "name": "Мария Шарапова",
+    "category": "Sports"
+  },
+  {
+    "id": 244,
+    "name": "Александр Карелин",
+    "category": "Sports"
+  },
+  {
+    "id": 245,
+    "name": "Елена Исинбаева",
+    "category": "Sports"
+  },
+  {
+    "id": 246,
+    "name": "Фёдор Емельяненко",
+    "category": "Sports"
+  },
+  {
+    "id": 247,
+    "name": "Николай Валуе",
+    "category": "Sports"
+  },
+  {
+    "id": 248,
+    "name": "Counter-Strike",
+    "category": "Games"
+  },
+  {
+    "id": 249,
+    "name": "Minecraft",
+    "category": "Games"
+  },
+  {
+    "id": 250,
+    "name": "GTA",
+    "category": "Games"
+  },
+  {
+    "id": 251,
+    "name": "Mortal Kombat",
+    "category": "Games"
+  },
+  {
+    "id": 252,
+    "name": "Тетрис",
+    "category": "Games"
+  },
+  {
+    "id": 253,
+    "name": "Dota 2",
+    "category": "Games"
+  },
+  {
+    "id": 254,
+    "name": "The Witcher",
+    "category": "Games"
+  },
+  {
+    "id": 255,
+    "name": "Sims",
+    "category": "Games"
+  },
+  {
+    "id": 256,
+    "name": "Half-Life",
+    "category": "Games"
+  },
+  {
+    "id": 257,
+    "name": "Need for Speed",
+    "category": "Games"
+  },
+  {
+    "id": 258,
+    "name": "FIFA",
+    "category": "Games"
+  },
+  {
+    "id": 259,
+    "name": "Превед Медвед",
+    "category": "Memes"
+  },
+  {
+    "id": 260,
+    "name": "Ждун",
+    "category": "Memes"
+  },
+  {
+    "id": 261,
+    "name": "Доге",
+    "category": "Memes"
+  },
+  {
+    "id": 262,
+    "name": "Гарольд, скрывающий боль",
+    "category": "Memes"
+  },
+  {
+    "id": 263,
+    "name": "Карл!",
+    "category": "Memes"
+  },
+  {
+    "id": 264,
+    "name": "Масяня",
+    "category": "Memes"
+  },
+  {
+    "id": 265,
+    "name": "Аська",
+    "category": "Memes"
+  },
+  {
+    "id": 266,
+    "name": "Одноклассники",
+    "category": "Memes"
+  },
+  {
+    "id": 267,
+    "name": "ВКонтакте",
+    "category": "Memes"
+  },
+  {
+    "id": 268,
+    "name": "Свидетель из Фрязино",
+    "category": "Memes"
+  },
+  {
+    "id": 269,
+    "name": "Кринж",
+    "category": "Memes"
+  },
+  {
+    "id": 270,
+    "name": "Telegram",
+    "category": "Internet"
+  },
+  {
+    "id": 271,
+    "name": "Max",
+    "category": "Internet"
+  },
+  {
+    "id": 272,
+    "name": "TikTok",
+    "category": "Internet"
+  },
+  {
+    "id": 273,
+    "name": "Алиса (Яндекс)",
+    "category": "Internet"
+  },
+  {
+    "id": 274,
+    "name": "ChatGPT",
+    "category": "Internet"
+  },
+  {
+    "id": 275,
+    "name": "Нейросеть",
+    "category": "Internet"
+  },
+  {
+    "id": 276,
+    "name": "Вирус",
+    "category": "Internet"
+  },
+  {
+    "id": 277,
+    "name": "Спам",
+    "category": "Internet"
+  },
+  {
+    "id": 278,
+    "name": "Твич-стримы",
+    "category": "Internet"
+  },
+  {
+    "id": 279,
+    "name": "Мем",
+    "category": "Internet"
+  },
+  {
+    "id": 280,
+    "name": "Маршрутка",
+    "category": "CIS Life"
+  },
+  {
+    "id": 281,
+    "name": "Дача",
+    "category": "CIS Life"
+  },
+  {
+    "id": 282,
+    "name": "Хрущёвка",
+    "category": "CIS Life"
+  },
+  {
+    "id": 283,
+    "name": "Подъезд",
+    "category": "CIS Life"
+  },
+  {
+    "id": 284,
+    "name": "Ковёр на стене",
+    "category": "CIS Life"
+  },
+  {
+    "id": 285,
+    "name": "Пакет с пакетами",
+    "category": "CIS Life"
+  },
+  {
+    "id": 286,
+    "name": "Семечки",
+    "category": "CIS Life"
+  },
+  {
+    "id": 287,
+    "name": "Общага",
+    "category": "CIS Life"
+  },
+  {
+    "id": 288,
+    "name": "Киоск",
+    "category": "CIS Life"
+  },
+  {
+    "id": 289,
+    "name": "Ларёк",
+    "category": "CIS Life"
+  },
+  {
+    "id": 290,
+    "name": "Рынок",
+    "category": "CIS Life"
+  },
+  {
+    "id": 291,
+    "name": "Плацкарт",
+    "category": "CIS Life"
+  },
+  {
+    "id": 292,
+    "name": "Электричка",
+    "category": "CIS Life"
+  },
+  {
+    "id": 293,
+    "name": "Тапочки для гостей",
+    "category": "CIS Life"
+  },
+  {
+    "id": 294,
+    "name": "Банка из-под кофе с гвоздями",
+    "category": "CIS Life"
+  },
+  {
+    "id": 295,
+    "name": "Лихие 90-е",
+    "category": "CIS Life"
+  },
+  {
+    "id": 296,
+    "name": "Пионерский лагерь",
+    "category": "CIS Life"
+  },
+  {
+    "id": 297,
+    "name": "Видак",
+    "category": "CIS Life"
+  },
+  {
+    "id": 298,
+    "name": "Кассета VHS",
+    "category": "CIS Life"
+  },
+  {
+    "id": 299,
+    "name": "МММ",
+    "category": "CIS Life"
+  },
+  {
+    "id": 300,
+    "name": "Рэкет",
+    "category": "CIS Life"
+  },
+  {
+    "id": 301,
+    "name": "Челнок",
+    "category": "CIS Life"
+  },
+  {
+    "id": 302,
+    "name": "Шпаргалка",
+    "category": "CIS Life"
+  },
+  {
+    "id": 303,
+    "name": "Зачётка",
+    "category": "CIS Life"
+  },
+  {
+    "id": 304,
+    "name": "Студенческий",
+    "category": "CIS Life"
+  },
+  {
+    "id": 305,
+    "name": "Пересдача",
+    "category": "CIS Life"
+  },
+  {
+    "id": 306,
+    "name": "Дипломная",
+    "category": "CIS Life"
+  },
+  {
+    "id": 307,
+    "name": "Первокурсник",
+    "category": "CIS Life"
+  },
+  {
+    "id": 308,
+    "name": "Препод",
+    "category": "CIS Life"
+  },
+  {
+    "id": 309,
+    "name": "Стипендия",
+    "category": "CIS Life"
+  },
+  {
+    "id": 310,
+    "name": "Оливье",
+    "category": "Food"
+  },
+  {
+    "id": 311,
+    "name": "Борщ",
+    "category": "Food"
+  },
+  {
+    "id": 312,
+    "name": "Пельмени",
+    "category": "Food"
+  },
+  {
+    "id": 313,
+    "name": "Доширак",
+    "category": "Food"
+  },
+  {
+    "id": 314,
+    "name": "Шаурма",
+    "category": "Food"
+  },
+  {
+    "id": 315,
+    "name": "Гречка",
+    "category": "Food"
+  },
+  {
+    "id": 316,
+    "name": "Сгущёнка",
+    "category": "Food"
+  },
+  {
+    "id": 317,
+    "name": "Квас",
+    "category": "Food"
+  },
+  {
+    "id": 318,
+    "name": "Компот",
+    "category": "Food"
+  },
+  {
+    "id": 319,
+    "name": "Селёдка под шубой",
+    "category": "Food"
+  },
+  {
+    "id": 320,
+    "name": "Холодец",
+    "category": "Food"
+  },
+  {
+    "id": 321,
+    "name": "Чебурек",
+    "category": "Food"
+  },
+  {
+    "id": 322,
+    "name": "Беляш",
+    "category": "Food"
+  },
+  {
+    "id": 323,
+    "name": "Пирожок",
+    "category": "Food"
+  },
+  {
+    "id": 324,
+    "name": "Сухарики",
+    "category": "Food"
+  },
+  {
+    "id": 325,
+    "name": "Крабовые палочки",
+    "category": "Food"
+  },
+  {
+    "id": 326,
+    "name": "Киндер-сюрприз",
+    "category": "Food"
+  },
+  {
+    "id": 327,
+    "name": "Жвачка Love Is",
+    "category": "Food"
+  },
+  {
+    "id": 328,
+    "name": "Чай с лимоном",
+    "category": "Food"
+  },
+  {
+    "id": 329,
+    "name": "Винегрет",
+    "category": "Food"
+  },
+  {
+    "id": 330,
+    "name": "Рассольник",
+    "category": "Food"
+  },
+  {
+    "id": 331,
+    "name": "Шашлык",
+    "category": "Food"
+  },
+  {
+    "id": 332,
+    "name": "Хачапури",
+    "category": "Food"
+  },
+  {
+    "id": 333,
+    "name": "Вареники",
+    "category": "Food"
+  },
+  {
+    "id": 334,
+    "name": "Блины",
+    "category": "Food"
+  },
+  {
+    "id": 335,
+    "name": "Сырники",
+    "category": "Food"
+  },
+  {
+    "id": 336,
+    "name": "Запеканка",
+    "category": "Food"
+  },
+  {
+    "id": 337,
+    "name": "Котлета по-киевски",
+    "category": "Food"
+  },
+  {
+    "id": 338,
+    "name": "Роллы",
+    "category": "Food"
+  },
+  {
+    "id": 339,
+    "name": "Бургер",
+    "category": "Food"
+  },
+  {
+    "id": 340,
+    "name": "Попкорн",
+    "category": "Food"
+  },
+  {
+    "id": 341,
+    "name": "Чипсы",
+    "category": "Food"
+  },
+  {
+    "id": 342,
+    "name": "Текила",
+    "category": "Party"
+  },
+  {
+    "id": 343,
+    "name": "Самогон",
+    "category": "Party"
+  },
+  {
+    "id": 344,
+    "name": "Водка",
+    "category": "Party"
+  },
+  {
+    "id": 345,
+    "name": "Шампанское",
+    "category": "Party"
+  },
+  {
+    "id": 346,
+    "name": "Пиво",
+    "category": "Party"
+  },
+  {
+    "id": 347,
+    "name": "Вино",
+    "category": "Party"
+  },
+  {
+    "id": 348,
+    "name": "Караоке",
+    "category": "Party"
+  },
+  {
+    "id": 349,
+    "name": "Тост",
+    "category": "Party"
+  },
+  {
+    "id": 350,
+    "name": "Похмелье",
+    "category": "Party"
+  },
+  {
+    "id": 351,
+    "name": "Корпоратив",
+    "category": "Party"
+  },
+  {
+    "id": 352,
+    "name": "Кальян",
+    "category": "Party"
+  },
+  {
+    "id": 353,
+    "name": "Рюмка",
+    "category": "Party"
+  },
+  {
+    "id": 354,
+    "name": "Закуска",
+    "category": "Party"
+  },
+  {
+    "id": 355,
+    "name": "Рассол",
+    "category": "Party"
+  },
+  {
+    "id": 356,
+    "name": "Домашняя вечеринка",
+    "category": "Party"
+  },
+  {
+    "id": 357,
+    "name": "Ночной клуб",
+    "category": "Party"
+  },
+  {
+    "id": 358,
+    "name": "Медляк",
+    "category": "Party"
+  },
+  {
+    "id": 359,
+    "name": "Пьяный сосед",
+    "category": "Party"
+  },
+  {
+    "id": 360,
+    "name": "Игра в бутылочку",
+    "category": "Party"
+  },
+  {
+    "id": 361,
+    "name": "Шоты",
+    "category": "Party"
+  },
+  {
+    "id": 362,
+    "name": "Джин-тоник",
+    "category": "Party"
+  },
+  {
+    "id": 363,
+    "name": "Лонг-айленд",
+    "category": "Party"
+  },
+  {
+    "id": 364,
+    "name": "Дресс-код",
+    "category": "Party"
+  },
+  {
+    "id": 365,
+    "name": "Тамада",
+    "category": "Party"
+  },
+  {
+    "id": 366,
+    "name": "Ди-джей",
+    "category": "Party"
+  },
+  {
+    "id": 367,
+    "name": "Танцпол",
+    "category": "Party"
+  },
+  {
+    "id": 368,
+    "name": "Москва",
+    "category": "Travel"
+  },
+  {
+    "id": 369,
+    "name": "Санкт-Петербург",
+    "category": "Travel"
+  },
+  {
+    "id": 370,
+    "name": "Киев",
+    "category": "Travel"
+  },
+  {
+    "id": 371,
+    "name": "Минск",
+    "category": "Travel"
+  },
+  {
+    "id": 372,
+    "name": "Тбилиси",
+    "category": "Travel"
+  },
+  {
+    "id": 373,
+    "name": "Ереван",
+    "category": "Travel"
+  },
+  {
+    "id": 374,
+    "name": "Алматы",
+    "category": "Travel"
+  },
+  {
+    "id": 375,
+    "name": "Баку",
+    "category": "Travel"
+  },
+  {
+    "id": 376,
+    "name": "Одесса",
+    "category": "Travel"
+  },
+  {
+    "id": 377,
+    "name": "Сочи",
+    "category": "Travel"
+  },
+  {
+    "id": 378,
+    "name": "Берлин",
+    "category": "Travel"
+  },
+  {
+    "id": 379,
+    "name": "Париж",
+    "category": "Travel"
+  },
+  {
+    "id": 380,
+    "name": "Лондон",
+    "category": "Travel"
+  },
+  {
+    "id": 381,
+    "name": "Нью-Йорк",
+    "category": "Travel"
+  },
+  {
+    "id": 382,
+    "name": "Токио",
+    "category": "Travel"
+  },
+  {
+    "id": 383,
+    "name": "Рим",
+    "category": "Travel"
+  },
+  {
+    "id": 384,
+    "name": "Стамбул",
+    "category": "Travel"
+  },
+  {
+    "id": 385,
+    "name": "Египет",
+    "category": "Travel"
+  },
+  {
+    "id": 386,
+    "name": "Япония",
+    "category": "Travel"
+  },
+  {
+    "id": 387,
+    "name": "Грузия",
+    "category": "Travel"
+  },
+  {
+    "id": 388,
+    "name": "Геленджик",
+    "category": "Travel"
+  },
+  {
+    "id": 389,
+    "name": "Набережные Челны",
+    "category": "Travel"
+  },
+  {
+    "id": 390,
+    "name": "Волгоград",
+    "category": "Travel"
+  },
+  {
+    "id": 391,
+    "name": "Мариуполь",
+    "category": "Travel"
+  },
+  {
+    "id": 392,
+    "name": "Дубай",
+    "category": "Travel"
+  },
+  {
+    "id": 393,
+    "name": "Бали",
+    "category": "Travel"
+  },
+  {
+    "id": 394,
+    "name": "Прага",
+    "category": "Travel"
+  },
+  {
+    "id": 395,
+    "name": "Амстердам",
+    "category": "Travel"
+  },
+  {
+    "id": 396,
+    "name": "Барселона",
+    "category": "Travel"
+  },
+  {
+    "id": 397,
+    "name": "Лас-Вегас",
+    "category": "Travel"
+  },
+  {
+    "id": 398,
+    "name": "Гонконг",
+    "category": "Travel"
+  },
+  {
+    "id": 399,
+    "name": "Мальдивы",
+    "category": "Travel"
+  },
+  {
+    "id": 400,
+    "name": "Алтай",
+    "category": "Travel"
+  },
+  {
+    "id": 401,
+    "name": "Куба",
+    "category": "Travel"
+  },
+  {
+    "id": 402,
+    "name": "Таиланд",
+    "category": "Travel"
+  },
+  {
+    "id": 403,
+    "name": "Шведский стол",
+    "category": "Travel"
+  },
+  {
+    "id": 404,
+    "name": "All inclusive",
+    "category": "Travel"
+  },
+  {
+    "id": 405,
+    "name": "Турпутёвка",
+    "category": "Travel"
+  },
+  {
+    "id": 406,
+    "name": "Анталья",
+    "category": "Travel"
+  },
+  {
+    "id": 407,
+    "name": "Хостел",
+    "category": "Travel"
+  },
+  {
+    "id": 408,
+    "name": "Автостоп",
+    "category": "Travel"
+  },
+  {
+    "id": 409,
+    "name": "Кемпинг",
+    "category": "Travel"
+  },
+  {
+    "id": 410,
+    "name": "Сувениры",
+    "category": "Travel"
+  },
+  {
+    "id": 411,
+    "name": "Багаж",
+    "category": "Travel"
+  },
+  {
+    "id": 412,
+    "name": "Кремль",
+    "category": "Landmarks"
+  },
+  {
+    "id": 413,
+    "name": "Красная площадь",
+    "category": "Landmarks"
+  },
+  {
+    "id": 414,
+    "name": "Эрмитаж",
+    "category": "Landmarks"
+  },
+  {
+    "id": 415,
+    "name": "Байкал",
+    "category": "Landmarks"
+  },
+  {
+    "id": 416,
+    "name": "Эйфелева башня",
+    "category": "Landmarks"
+  },
+  {
+    "id": 417,
+    "name": "Биг-Бен",
+    "category": "Landmarks"
+  },
+  {
+    "id": 418,
+    "name": "Колизей",
+    "category": "Landmarks"
+  },
+  {
+    "id": 419,
+    "name": "Пирамиды Гизы",
+    "category": "Landmarks"
+  },
+  {
+    "id": 420,
+    "name": "Великая Китайская стена",
+    "category": "Landmarks"
+  },
+  {
+    "id": 421,
+    "name": "Статуя Свободы",
+    "category": "Landmarks"
+  },
+  {
+    "id": 422,
+    "name": "Эверест",
+    "category": "Landmarks"
+  },
+  {
+    "id": 423,
+    "name": "Сахара",
+    "category": "Landmarks"
+  },
+  {
+    "id": 424,
+    "name": "Чернобыль",
+    "category": "Landmarks"
+  },
+  {
+    "id": 425,
+    "name": "Диснейленд",
+    "category": "Landmarks"
+  },
+  {
+    "id": 426,
+    "name": "Лувр",
+    "category": "Landmarks"
+  },
+  {
+    "id": 427,
+    "name": "Тадж-Махал",
+    "category": "Landmarks"
+  },
+  {
+    "id": 428,
+    "name": "Гранд-Каньон",
+    "category": "Landmarks"
+  },
+  {
+    "id": 429,
+    "name": "Стоунхендж",
+    "category": "Landmarks"
+  },
+  {
+    "id": 430,
+    "name": "Собор Василия Блаженного",
+    "category": "Landmarks"
+  },
+  {
+    "id": 431,
+    "name": "Бранденбургские ворота",
+    "category": "Landmarks"
+  },
+  {
+    "id": 432,
+    "name": "Мачу-Пикчу",
+    "category": "Landmarks"
+  },
+  {
+    "id": 433,
+    "name": "Врач",
+    "category": "Jobs"
+  },
+  {
+    "id": 434,
+    "name": "Учитель",
+    "category": "Jobs"
+  },
+  {
+    "id": 435,
+    "name": "Программист",
+    "category": "Jobs"
+  },
+  {
+    "id": 436,
+    "name": "Инженер",
+    "category": "Jobs"
+  },
+  {
+    "id": 437,
+    "name": "Таксист",
+    "category": "Jobs"
+  },
+  {
+    "id": 438,
+    "name": "Бармен",
+    "category": "Jobs"
+  },
+  {
+    "id": 439,
+    "name": "Повар",
+    "category": "Jobs"
+  },
+  {
+    "id": 440,
+    "name": "Полицейский",
+    "category": "Jobs"
+  },
+  {
+    "id": 441,
+    "name": "Пожарный",
+    "category": "Jobs"
+  },
+  {
+    "id": 442,
+    "name": "Космонавт",
+    "category": "Jobs"
+  },
+  {
+    "id": 443,
+    "name": "Актёр",
+    "category": "Jobs"
+  },
+  {
+    "id": 444,
+    "name": "Музыкант",
+    "category": "Jobs"
+  },
+  {
+    "id": 445,
+    "name": "Дворник",
+    "category": "Jobs"
+  },
+  {
+    "id": 446,
+    "name": "Сантехник",
+    "category": "Jobs"
+  },
+  {
+    "id": 447,
+    "name": "Электрик",
+    "category": "Jobs"
+  },
+  {
+    "id": 448,
+    "name": "Юрист",
+    "category": "Jobs"
+  },
+  {
+    "id": 449,
+    "name": "Бухгалтер",
+    "category": "Jobs"
+  },
+  {
+    "id": 450,
+    "name": "Фотограф",
+    "category": "Jobs"
+  },
+  {
+    "id": 451,
+    "name": "Охранник",
+    "category": "Jobs"
+  },
+  {
+    "id": 452,
+    "name": "Парикмахер",
+    "category": "Jobs"
+  },
+  {
+    "id": 453,
+    "name": "Риелтор",
+    "category": "Jobs"
+  },
+  {
+    "id": 454,
+    "name": "Маркетолог",
+    "category": "Jobs"
+  },
+  {
+    "id": 455,
+    "name": "Блогер",
+    "category": "Jobs"
+  },
+  {
+    "id": 456,
+    "name": "Стример",
+    "category": "Jobs"
+  },
+  {
+    "id": 457,
+    "name": "Дизайнер",
+    "category": "Jobs"
+  },
+  {
+    "id": 458,
+    "name": "Менеджер по продажам",
+    "category": "Jobs"
+  },
+  {
+    "id": 459,
+    "name": "Курьер",
+    "category": "Jobs"
+  },
+  {
+    "id": 460,
+    "name": "Кладовщик",
+    "category": "Jobs"
+  },
+  {
+    "id": 461,
+    "name": "Грузчик",
+    "category": "Jobs"
+  },
+  {
+    "id": 462,
+    "name": "Военный",
+    "category": "Jobs"
+  },
+  {
+    "id": 463,
+    "name": "Чиновник",
+    "category": "Jobs"
+  },
+  {
+    "id": 464,
+    "name": "Депутат",
+    "category": "Jobs"
+  },
+  {
+    "id": 465,
+    "name": "Стюардесса",
+    "category": "Jobs"
+  },
+  {
+    "id": 466,
+    "name": "Шахтёр",
+    "category": "Jobs"
+  },
+  {
+    "id": 467,
+    "name": "Новый год",
+    "category": "Holidays"
+  },
+  {
+    "id": 468,
+    "name": "День рождения",
+    "category": "Holidays"
+  },
+  {
+    "id": 469,
+    "name": "Свадьба",
+    "category": "Holidays"
+  },
+  {
+    "id": 470,
+    "name": "Масленица",
+    "category": "Holidays"
+  },
+  {
+    "id": 471,
+    "name": "Пасха",
+    "category": "Holidays"
+  },
+  {
+    "id": 472,
+    "name": "Первое сентября",
+    "category": "Holidays"
+  },
+  {
+    "id": 473,
+    "name": "Выпускной",
+    "category": "Holidays"
+  },
+  {
+    "id": 474,
+    "name": "Мальчишник",
+    "category": "Holidays"
+  },
+  {
+    "id": 475,
+    "name": "Девичник",
+    "category": "Holidays"
+  },
+  {
+    "id": 476,
+    "name": "Крещение",
+    "category": "Holidays"
+  },
+  {
+    "id": 477,
+    "name": "Хэллоуин",
+    "category": "Holidays"
+  },
+  {
+    "id": 478,
+    "name": "Рождество",
+    "category": "Holidays"
+  },
+  {
+    "id": 479,
+    "name": "День святого Валентина",
+    "category": "Holidays"
+  },
+  {
+    "id": 480,
+    "name": "Восьмое марта",
+    "category": "Holidays"
+  },
+  {
+    "id": 481,
+    "name": "Застолье",
+    "category": "Holidays"
+  },
+  {
+    "id": 482,
+    "name": "Юбилей",
+    "category": "Holidays"
+  },
+  {
+    "id": 483,
+    "name": "Шашлычный сезон",
+    "category": "Holidays"
+  },
+  {
+    "id": 484,
+    "name": "Капибара",
+    "category": "Animals"
+  },
+  {
+    "id": 485,
+    "name": "Корги",
+    "category": "Animals"
+  },
+  {
+    "id": 486,
+    "name": "Шпиц",
+    "category": "Animals"
+  },
+  {
+    "id": 487,
+    "name": "Кот",
+    "category": "Animals"
+  },
+  {
+    "id": 488,
+    "name": "Собака",
+    "category": "Animals"
+  },
+  {
+    "id": 489,
+    "name": "Пингвин",
+    "category": "Animals"
+  },
+  {
+    "id": 490,
+    "name": "Енот",
+    "category": "Animals"
+  },
+  {
+    "id": 491,
+    "name": "Панда",
+    "category": "Animals"
+  },
+  {
+    "id": 492,
+    "name": "Крокодил",
+    "category": "Animals"
+  },
+  {
+    "id": 493,
+    "name": "Акула",
+    "category": "Animals"
+  },
+  {
+    "id": 494,
+    "name": "Слон",
+    "category": "Animals"
+  },
+  {
+    "id": 495,
+    "name": "Жираф",
+    "category": "Animals"
+  },
+  {
+    "id": 496,
+    "name": "Обезьяна",
+    "category": "Animals"
+  },
+  {
+    "id": 497,
+    "name": "Лев",
+    "category": "Animals"
+  },
+  {
+    "id": 498,
+    "name": "Тигр",
+    "category": "Animals"
+  },
+  {
+    "id": 499,
+    "name": "Медведь",
+    "category": "Animals"
+  },
+  {
+    "id": 500,
+    "name": "Лиса",
+    "category": "Animals"
+  },
+  {
+    "id": 501,
+    "name": "Волк",
+    "category": "Animals"
+  },
+  {
+    "id": 502,
+    "name": "Попугай",
+    "category": "Animals"
+  },
+  {
+    "id": 503,
+    "name": "Хомяк",
+    "category": "Animals"
+  },
+  {
+    "id": 504,
+    "name": "Утконос",
+    "category": "Animals"
+  },
+  {
+    "id": 505,
+    "name": "Лама",
+    "category": "Animals"
+  },
+  {
+    "id": 506,
+    "name": "Бобёр",
+    "category": "Animals"
+  },
+  {
+    "id": 507,
+    "name": "Выдра",
+    "category": "Animals"
+  },
+  {
+    "id": 508,
+    "name": "Хаски",
+    "category": "Animals"
+  },
+  {
+    "id": 509,
+    "name": "Мопс",
+    "category": "Animals"
+  },
+  {
+    "id": 510,
+    "name": "Такса",
+    "category": "Animals"
+  },
+  {
+    "id": 511,
+    "name": "Шиншилла",
+    "category": "Animals"
+  },
+  {
+    "id": 512,
+    "name": "Страус",
+    "category": "Animals"
+  },
+  {
+    "id": 513,
+    "name": "Фламинго",
+    "category": "Animals"
+  },
+  {
+    "id": 514,
+    "name": "Скунс",
+    "category": "Animals"
+  },
+  {
+    "id": 515,
+    "name": "Ёж",
+    "category": "Animals"
+  },
+  {
+    "id": 516,
+    "name": "Кабан",
+    "category": "Animals"
+  },
+  {
+    "id": 517,
+    "name": "Баба-Яга",
+    "category": "Myths"
+  },
+  {
+    "id": 518,
+    "name": "Кощей Бессмертный",
+    "category": "Myths"
+  },
+  {
+    "id": 519,
+    "name": "Змей Горыныч",
+    "category": "Myths"
+  },
+  {
+    "id": 520,
+    "name": "Домовой",
+    "category": "Myths"
+  },
+  {
+    "id": 521,
+    "name": "Леший",
+    "category": "Myths"
+  },
+  {
+    "id": 522,
+    "name": "Русалка",
+    "category": "Myths"
+  },
+  {
+    "id": 523,
+    "name": "Водяной",
+    "category": "Myths"
+  },
+  {
+    "id": 524,
+    "name": "Илья Муромец",
+    "category": "Myths"
+  },
+  {
+    "id": 525,
+    "name": "Соловей-разбойник",
+    "category": "Myths"
+  },
+  {
+    "id": 526,
+    "name": "Дед Мороз",
+    "category": "Myths"
+  },
+  {
+    "id": 527,
+    "name": "Снегурочка",
+    "category": "Myths"
+  },
+  {
+    "id": 528,
+    "name": "Зевс",
+    "category": "Myths"
+  },
+  {
+    "id": 529,
+    "name": "Геракл",
+    "category": "Myths"
+  },
+  {
+    "id": 530,
+    "name": "Афродита",
+    "category": "Myths"
+  },
+  {
+    "id": 531,
+    "name": "Аид",
+    "category": "Myths"
+  },
+  {
+    "id": 532,
+    "name": "Тор",
+    "category": "Myths"
+  },
+  {
+    "id": 533,
+    "name": "Один",
+    "category": "Myths"
+  },
+  {
+    "id": 534,
+    "name": "Локи",
+    "category": "Myths"
+  },
+  {
+    "id": 535,
+    "name": "Дракон",
+    "category": "Myths"
+  },
+  {
+    "id": 536,
+    "name": "Вампир",
+    "category": "Myths"
+  },
+  {
+    "id": 537,
+    "name": "Кикимора",
+    "category": "Myths"
+  },
+  {
+    "id": 538,
+    "name": "Жар-птица",
+    "category": "Myths"
+  },
+  {
+    "id": 539,
+    "name": "Иван-царевич",
+    "category": "Myths"
+  },
+  {
+    "id": 540,
+    "name": "Серый волк",
+    "category": "Myths"
+  },
+  {
+    "id": 541,
+    "name": "Конёк-Горбунок",
+    "category": "Myths"
+  },
+  {
+    "id": 542,
+    "name": "Колобок",
+    "category": "Myths"
+  },
+  {
+    "id": 543,
+    "name": "Золотая рыбка",
+    "category": "Myths"
+  },
+  {
+    "id": 544,
+    "name": "Посейдон",
+    "category": "Myths"
+  },
+  {
+    "id": 545,
+    "name": "Аполлон",
+    "category": "Myths"
+  },
+  {
+    "id": 546,
+    "name": "Медуза Горгона",
+    "category": "Myths"
+  },
+  {
+    "id": 547,
+    "name": "Минотавр",
+    "category": "Myths"
+  },
+  {
+    "id": 548,
+    "name": "Первое свидание",
+    "category": "Life"
+  },
+  {
+    "id": 549,
+    "name": "Собеседование",
+    "category": "Life"
+  },
+  {
+    "id": 550,
+    "name": "Переезд",
+    "category": "Life"
+  },
+  {
+    "id": 551,
+    "name": "Ремонт",
+    "category": "Life"
+  },
+  {
+    "id": 552,
+    "name": "Опоздание на самолёт",
+    "category": "Life"
+  },
+  {
+    "id": 553,
+    "name": "Потерянный паспорт",
+    "category": "Life"
+  },
+  {
+    "id": 554,
+    "name": "Экзамен",
+    "category": "Life"
+  },
+  {
+    "id": 555,
+    "name": "Сессия",
+    "category": "Life"
+  },
+  {
+    "id": 556,
+    "name": "Развод",
+    "category": "Life"
+  },
+  {
+    "id": 557,
+    "name": "Лифт",
+    "category": "Life"
+  },
+  {
+    "id": 558,
+    "name": "Встреча выпускников",
+    "category": "Life"
+  },
+  {
+    "id": 559,
+    "name": "Паника",
+    "category": "Emotions"
+  },
+  {
+    "id": 560,
+    "name": "Влюблённость",
+    "category": "Emotions"
+  },
+  {
+    "id": 561,
+    "name": "Ревность",
+    "category": "Emotions"
+  },
+  {
+    "id": 562,
+    "name": "Зависть",
+    "category": "Emotions"
+  },
+  {
+    "id": 563,
+    "name": "Лень",
+    "category": "Emotions"
+  },
+  {
+    "id": 564,
+    "name": "Ностальгия",
+    "category": "Emotions"
+  },
+  {
+    "id": 565,
+    "name": "Выгорание",
+    "category": "Emotions"
+  },
+  {
+    "id": 566,
+    "name": "Стыд",
+    "category": "Emotions"
+  },
+  {
+    "id": 567,
+    "name": "Гордость",
+    "category": "Emotions"
+  },
+  {
+    "id": 568,
+    "name": "Обида",
+    "category": "Emotions"
+  },
+  {
+    "id": 569,
+    "name": "Радость",
+    "category": "Emotions"
+  },
+  {
+    "id": 570,
+    "name": "Скука",
+    "category": "Emotions"
+  },
+  {
+    "id": 571,
+    "name": "Усталость",
+    "category": "Emotions"
+  },
+  {
+    "id": 572,
+    "name": "Азарт",
+    "category": "Emotions"
+  },
+  {
+    "id": 573,
+    "name": "Стресс",
+    "category": "Emotions"
+  },
+  {
+    "id": 574,
+    "name": "Растерянность",
+    "category": "Emotions"
+  },
+  {
+    "id": 575,
+    "name": "Смущение",
+    "category": "Emotions"
+  },
+  {
+    "id": 576,
+    "name": "Гнев",
+    "category": "Emotions"
+  },
+  {
+    "id": 577,
+    "name": "Спокойствие",
+    "category": "Emotions"
+  },
+  {
+    "id": 578,
+    "name": "Отчаяние",
+    "category": "Emotions"
+  },
+  {
+    "id": 579,
+    "name": "Эйфория",
+    "category": "Emotions"
+  },
+  {
+    "id": 580,
+    "name": "Разочарование",
+    "category": "Emotions"
+  },
+  {
+    "id": 581,
+    "name": "Удивление",
+    "category": "Emotions"
+  },
+  {
+    "id": 582,
+    "name": "Тревога",
+    "category": "Emotions"
+  },
+  {
+    "id": 583,
+    "name": "Вина",
+    "category": "Emotions"
+  },
+  {
+    "id": 584,
+    "name": "Благодарность",
+    "category": "Emotions"
+  },
+  {
+    "id": 585,
+    "name": "Любопытство",
+    "category": "Emotions"
+  },
+  {
+    "id": 586,
+    "name": "Апатия",
+    "category": "Emotions"
+  },
+  {
+    "id": 587,
+    "name": "Вдохновение",
+    "category": "Emotions"
+  },
+  {
+    "id": 588,
+    "name": "Облегчение",
+    "category": "Emotions"
+  },
+  {
+    "id": 589,
+    "name": "Беспомощность",
+    "category": "Emotions"
+  },
+  {
+    "id": 590,
+    "name": "Экстаз",
+    "category": "Emotions"
+  },
+  {
+    "id": 591,
+    "name": "Меланхолия",
+    "category": "Emotions"
+  },
+  {
+    "id": 592,
+    "name": "Коррупция",
+    "category": "Society"
+  },
+  {
+    "id": 593,
+    "name": "Бюрократия",
+    "category": "Society"
+  },
+  {
+    "id": 594,
+    "name": "Инфляция",
+    "category": "Society"
+  },
+  {
+    "id": 595,
+    "name": "Цензура",
+    "category": "Society"
+  },
+  {
+    "id": 596,
+    "name": "Пропаганда",
+    "category": "Society"
+  },
+  {
+    "id": 597,
+    "name": "Миграция",
+    "category": "Society"
+  },
+  {
+    "id": 598,
+    "name": "Глобализация",
+    "category": "Society"
+  },
+  {
+    "id": 599,
+    "name": "Прокрастинация",
+    "category": "Society"
+  },
+  {
+    "id": 600,
+    "name": "Удалёнка",
+    "category": "Society"
+  },
+  {
+    "id": 601,
+    "name": "Отпуск",
+    "category": "Society"
+  },
+  {
+    "id": 602,
+    "name": "Фейк-ньюс",
+    "category": "Society"
+  },
+  {
+    "id": 603,
+    "name": "Кликбейт",
+    "category": "Society"
+  },
+  {
+    "id": 604,
+    "name": "Троллинг",
+    "category": "Society"
+  },
+  {
+    "id": 605,
+    "name": "Хайп",
+    "category": "Society"
+  },
+  {
+    "id": 606,
+    "name": "Очередь",
+    "category": "Society"
+  },
+  {
+    "id": 607,
+    "name": "Кумовство",
+    "category": "Society"
+  },
+  {
+    "id": 608,
+    "name": "Экология",
+    "category": "Society"
+  },
+  {
+    "id": 609,
+    "name": "Феминизм",
+    "category": "Society"
+  },
+  {
+    "id": 610,
+    "name": "Санкции",
+    "category": "Society"
+  },
+  {
+    "id": 611,
+    "name": "Айтишник",
+    "category": "Society"
+  },
+  {
+    "id": 612,
+    "name": "Стартап",
+    "category": "Society"
+  },
+  {
+    "id": 613,
+    "name": "Краудфандинг",
+    "category": "Society"
+  },
+  {
+    "id": 614,
+    "name": "Биткоин",
+    "category": "Society"
+  },
+  {
+    "id": 615,
+    "name": "Инфлюенсер",
+    "category": "Society"
+  },
+  {
+    "id": 616,
+    "name": "Бан",
+    "category": "Society"
+  },
+  {
+    "id": 617,
+    "name": "Газлайтинг",
+    "category": "Society"
+  },
+  {
+    "id": 618,
+    "name": "Токсичность",
+    "category": "Society"
+  },
+  {
+    "id": 619,
+    "name": "Зубная щётка",
+    "category": "Objects"
+  },
+  {
+    "id": 620,
+    "name": "Зонт",
+    "category": "Objects"
+  },
+  {
+    "id": 621,
+    "name": "Холодильник",
+    "category": "Objects"
+  },
+  {
+    "id": 622,
+    "name": "Микроволновка",
+    "category": "Objects"
+  },
+  {
+    "id": 623,
+    "name": "Пульт от телевизора",
+    "category": "Objects"
+  },
+  {
+    "id": 624,
+    "name": "Носок",
+    "category": "Objects"
+  },
+  {
+    "id": 625,
+    "name": "Ключи",
+    "category": "Objects"
+  },
+  {
+    "id": 626,
+    "name": "Рюкзак",
+    "category": "Objects"
+  },
+  {
+    "id": 627,
+    "name": "Чайник",
+    "category": "Objects"
+  },
+  {
+    "id": 628,
+    "name": "Сковородка",
+    "category": "Objects"
+  },
+  {
+    "id": 629,
+    "name": "Будильник",
+    "category": "Objects"
+  },
+  {
+    "id": 630,
+    "name": "Зарядка для телефона",
+    "category": "Objects"
+  },
+  {
+    "id": 631,
+    "name": "Флешка",
+    "category": "Objects"
+  },
+  {
+    "id": 632,
+    "name": "Скотч",
+    "category": "Objects"
+  },
+  {
+    "id": 633,
+    "name": "Отвёртка",
+    "category": "Objects"
+  },
+  {
+    "id": 634,
+    "name": "Пылесос",
+    "category": "Objects"
+  },
+  {
+    "id": 635,
+    "name": "Тапочки",
+    "category": "Objects"
+  },
+  {
+    "id": 636,
+    "name": "Расчёска",
+    "category": "Objects"
+  },
+  {
+    "id": 637,
+    "name": "Пластиковый пакет",
+    "category": "Objects"
+  },
+  {
+    "id": 638,
+    "name": "Кружка",
+    "category": "Objects"
+  },
+  {
+    "id": 639,
+    "name": "Дискета",
+    "category": "Objects"
+  },
+  {
+    "id": 640,
+    "name": "Пейджер",
+    "category": "Objects"
+  },
+  {
+    "id": 641,
+    "name": "Nokia 3310",
+    "category": "Objects"
+  },
+  {
+    "id": 642,
+    "name": "Тамагочи",
+    "category": "Objects"
+  },
+  {
+    "id": 643,
+    "name": "Термос",
+    "category": "Objects"
+  },
+  {
+    "id": 644,
+    "name": "Калькулятор",
+    "category": "Objects"
+  },
+  {
+    "id": 645,
+    "name": "Мультиварка",
+    "category": "Objects"
+  },
+  {
+    "id": 646,
+    "name": "Спиннер",
+    "category": "Objects"
+  },
+  {
+    "id": 647,
+    "name": "Френдзона",
+    "category": "Misc"
+  },
+  {
+    "id": 648,
+    "name": "Любовница",
+    "category": "Misc"
+  },
+  {
+    "id": 649,
+    "name": "Секс-шоп",
+    "category": "Misc"
+  },
+  {
+    "id": 650,
+    "name": "Стриптиз",
+    "category": "Misc"
+  },
+  {
+    "id": 651,
+    "name": "Тиндер",
+    "category": "Misc"
+  },
+  {
+    "id": 652,
+    "name": "Свингеры",
+    "category": "Misc"
+  },
+  {
+    "id": 653,
+    "name": "Алименты",
+    "category": "Misc"
+  },
+  {
+    "id": 654,
+    "name": "Виагра",
+    "category": "Misc"
+  },
+  {
+    "id": 655,
+    "name": "Камасутра",
+    "category": "Misc"
+  },
+  {
+    "id": 656,
+    "name": "Порно",
+    "category": "Misc"
+  },
+  {
+    "id": 657,
+    "name": "Тройничек",
+    "category": "Misc"
+  },
+  {
+    "id": 658,
+    "name": "Голландский штурвал 18+",
+    "category": "Misc"
+  },
+  {
+    "id": 659,
+    "name": "Чайный пакетик 18+",
+    "category": "Misc"
+  },
+  {
+    "id": 660,
+    "name": "Печенька 18+",
+    "category": "Misc"
+  },
+  {
+    "id": 661,
+    "name": "Групповуха",
+    "category": "Misc"
+  },
+  {
+    "id": 662,
+    "name": "Белочка",
+    "category": "Misc"
+  },
+  {
+    "id": 663,
+    "name": "Запой",
+    "category": "Misc"
+  },
+  {
+    "id": 664,
+    "name": "Егермейстер",
+    "category": "Misc"
+  },
+  {
+    "id": 665,
+    "name": "Тёща",
+    "category": "Misc"
+  },
+  {
+    "id": 666,
+    "name": "Свекровь",
+    "category": "Misc"
+  },
+  {
+    "id": 667,
+    "name": "Ипотека",
+    "category": "Misc"
+  }
+]

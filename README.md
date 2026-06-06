@@ -11,12 +11,12 @@ The app is intentionally simple: `index.html` contains one empty `<main id="app"
 
 The complete game is stored in one serializable `state` object. That state includes the current round, team names, current team, remaining deck, guessed pile, skipped pile, round scores, total scores, current turn information, and last turn summary. After every meaningful action, `saveState()` writes this object to browser `localStorage`, which is why refreshing or closing the browser can restore the game.
 
-The card database lives in `public/cards.json`. When a new game starts, `loadCards()` loads the JSON file, the setup form chooses a random subset of cards, and the app stores the selected card ids in `originalDeck`. The `originalDeck` is never modified, so rounds 2 and 3 can reuse the exact same cards with a fresh shuffle.
+The card database lives in `public/cards_ru_categories.json`. Each card has a name and category. When a new game starts, `loadCards()` loads the JSON file, the setup form chooses a random subset of cards, and the app stores the selected card ids in `originalDeck`. The `originalDeck` is never modified, so rounds 2 and 3 can reuse the exact same cards with a fresh shuffle.
 
 ## Features
 
 - New game setup for two team names and deck size.
-- Built-in card database loaded from `public/cards.json`.
+- Built-in Russian card database loaded from `public/cards_ru_categories.json`.
 - Three-round party-card flow with alternating team turns.
 - 60-second turns with Correct and Skip actions.
 - Skipped cards return to the remaining deck at the end of each turn.
@@ -29,7 +29,7 @@ The card database lives in `public/cards.json`. When a new game starts, `loadCar
 - `index.html` is the static GitHub Pages entry point and loads the CSS and JavaScript.
 - `src/app.js` contains the full game state, screen rendering, timer logic, deck movement, scoring, and localStorage persistence.
 - `src/styles.css` contains the mobile-first layout and visual design.
-- `public/cards.json` contains the built-in party-card database.
+- `public/cards_ru_categories.json` contains the built-in Russian party-card database with categories.
 - `package.json` only provides project metadata and a simple local preview command.
 
 ## Screen And Function Flow
@@ -38,7 +38,7 @@ The card database lives in `public/cards.json`. When a new game starts, `loadCar
 
 When the page loads, the browser runs `src/app.js`.
 
-The first function called is `init()`. It calls `loadCards()` to fetch `public/cards.json`, then calls `render()`.
+The first function called is `init()`. It calls `loadCards()` to fetch `public/cards_ru_categories.json`, then calls `render()`.
 
 Before `init()` runs, the app also calls `loadState()`. If there is a saved localStorage game, `state` starts with that saved game. If there is no saved game, `state` is `null`.
 
@@ -195,14 +195,14 @@ When the app starts, `loadState()` checks localStorage. If a saved game exists, 
 Browsers sometimes cache static GitHub Pages files aggressively. To make updates easier to see, `index.html` defines:
 
 ```js
-window.APP_VERSION = "2026-06-06-15";
+window.APP_VERSION = "2026-06-06-16";
 ```
 
 The same version is added to the CSS and JavaScript URLs:
 
 ```html
-./src/styles.css?v=2026-06-06-15
-./src/app.js?v=2026-06-06-15
+./src/styles.css?v=2026-06-06-16
+./src/app.js?v=2026-06-06-16
 ```
 
 When this version changes, the browser treats the files as new URLs and requests fresh copies from GitHub Pages.

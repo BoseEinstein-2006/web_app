@@ -18,7 +18,7 @@ const MAX_ROUNDS = 3;
 // #app is the only DOM mount point. render() replaces its contents per screen.
 const app = document.querySelector("#app");
 
-// Loaded once from public/cards.json at startup.
+// Loaded once from public/cards_ru_categories.json at startup.
 let allCards = [];
 
 // state is the single source of truth for the app.
@@ -38,8 +38,9 @@ async function init() {
 
 async function loadCards() {
   try {
-    // GitHub Pages serves public/cards.json as a plain static asset.
-    const response = await fetch("./public/cards.json", { cache: "no-store" });
+    // GitHub Pages serves public/cards_ru_categories.json as a plain static asset.
+    // Each card can include extra metadata, such as category; gameplay uses the name.
+    const response = await fetch("./public/cards_ru_categories.json", { cache: "no-store" });
     if (!response.ok) throw new Error("Could not load cards");
     return await response.json();
   } catch (error) {
@@ -184,7 +185,7 @@ function renderSetup() {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
 
-    // Clamp deck size so the user cannot ask for more cards than cards.json contains.
+    // Clamp deck size so the user cannot ask for more cards than the JSON contains.
     const deckSize = clamp(Number(form.get("deckSize")) || 40, 5, allCards.length);
 
     // A new game uses a random subset of the built-in card database.
