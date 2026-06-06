@@ -115,8 +115,8 @@ function renderHome() {
     <section class="screen hero">
       <h1>Monikers у нас дома</h1>
       <div class="button-stack">
-        <button class="primary" data-action="new-game">New Game</button>
-        ${hasSavedGame ? '<button class="secondary" data-action="resume-game">Resume Game</button>' : ""}
+        <button class="primary" data-action="new-game">Новая игра</button>
+        ${hasSavedGame ? '<button class="secondary" data-action="resume-game">Продолжить игру</button>' : ""}
       </div>
     </section>
   `;
