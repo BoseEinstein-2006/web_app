@@ -51,6 +51,12 @@ button {
   transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  transform: none;
+}
+
 button:active {
   transform: translateY(2px) scale(0.99);
   box-shadow: 0 6px 16px rgba(32, 26, 18, 0.16);
@@ -185,6 +191,44 @@ h3 {
   background: transparent;
   box-shadow: none;
   color: rgba(32, 26, 18, 0.7);
+}
+
+.rules-button {
+  background: var(--sun);
+}
+
+.rules-screen {
+  position: relative;
+  display: grid;
+  min-height: calc(100svh - 2rem);
+  place-items: center;
+}
+
+.back-button {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  display: grid;
+  width: 3.3rem;
+  min-height: 3.3rem;
+  place-items: center;
+  padding: 0;
+  background: var(--navy);
+  color: var(--cream);
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.65rem;
+  line-height: 1;
+  z-index: 2;
+}
+
+.rules-image {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100svh - 2rem);
+  border: 2px solid rgba(32, 26, 18, 0.12);
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  object-fit: contain;
 }
 
 .play-screen {

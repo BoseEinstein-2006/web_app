@@ -101,6 +101,7 @@ function render() {
 
   // Basic screen router: state.screen decides which UI function draws the page.
   if (state.screen === "setup") renderSetup();
+  if (state.screen === "rules") renderRules();
   if (state.screen === "turn-start") renderTurnStart();
   if (state.screen === "active-turn") renderActiveTurn();
   if (state.screen === "turn-summary") renderTurnSummary();
@@ -116,7 +117,8 @@ function renderHome() {
       <h1>Monikers у нас дома</h1>
       <div class="button-stack">
         <button class="primary" data-action="new-game">Новая игра</button>
-        ${hasSavedGame ? '<button class="secondary" data-action="resume-game">Продолжить игру</button>' : ""}
+        <button class="secondary" data-action="resume-game" ${hasSavedGame ? "" : "disabled"}>Продолжить игру</button>
+        <button class="rules-button" data-action="rules">Правила</button>
       </div>
     </section>
   `;
@@ -128,8 +130,30 @@ function renderHome() {
   });
 
   on("resume-game", () => {
+    if (!hasSavedGame) return;
+
     // Resume restores the exact previous state, including round/team/deck.
     state = loadState();
+    render();
+  });
+
+  on("rules", () => {
+    // Rules is not saved as a game state; it is just a temporary info screen.
+    state = { screen: "rules" };
+    render();
+  });
+}
+
+function renderRules() {
+  app.innerHTML = `
+    <section class="screen rules-screen">
+      <button class="back-button" data-action="back-home" aria-label="Back to home">←</button>
+      <img class="rules-image" src="./gorilla_image.jpg" alt="Game rules" />
+    </section>
+  `;
+
+  on("back-home", () => {
+    state = null;
     render();
   });
 }
