@@ -260,7 +260,7 @@ function renderTurnStart() {
   app.innerHTML = `
     <section class="screen card-panel center setup-screen">
       <button class="back-button setup-back-button" data-action="save-home" aria-label="Назад">←</button>
-      <p class="round-label">РАУНД ${state.round}</p>
+      <p class="round-label">Раунд ${state.round}</p>
       <h2>Ход команды ${currentTeam().name}</h2>
       <p class="lede">Осталось карт: ${state.remainingDeck.length}</p>
       <button class="primary" data-action="start-turn">Начать ход</button>
@@ -313,7 +313,7 @@ function renderActiveTurn() {
     <section class="screen play-screen ${state.feedback ? `flash-${state.feedback}` : ""}">
       <button class="back-button play-back-button" data-action="pause-turn" aria-label="Назад">←</button>
       <div class="top-row">
-        <span>РАУНД ${state.round}</span>
+        <span>Раунд ${state.round}</span>
         <span>${currentTeam().name}</span>
       </div>
       <div class="timer" data-timer>${secondsLeft}</div>

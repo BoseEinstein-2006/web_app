@@ -23,7 +23,7 @@ body {
 body {
   margin: 0;
   color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Verdana, Geneva, sans-serif;
   /* Layered gradients give the static page a playful table-top party-game feel. */
   background:
     radial-gradient(circle at 20% 10%, rgba(240, 107, 79, 0.35), transparent 28rem),
@@ -33,7 +33,7 @@ body {
 
 button,
 input {
-  /* Form controls inherit the expressive serif font instead of browser defaults. */
+  /* Form controls inherit the app font instead of browser defaults. */
   font: inherit;
 }
 
@@ -117,14 +117,12 @@ input:focus {
 
 .eyebrow,
 .round-label {
-  /* Small uppercase labels orient the player without stealing focus. */
+  /* Small labels orient the player without stealing focus. */
   margin: 0 0 0.45rem;
-  color: var(--tomato);
-  font-family: Verdana, Geneva, sans-serif;
+  color: var(--ink);
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.18em;
-  text-transform: uppercase;
 }
 
 h1,
@@ -137,6 +135,7 @@ p {
 h1 {
   /* The title is intentionally oversized for a bold board-game-box feel. */
   margin-bottom: 0;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(4.2rem, 18vw, 7.4rem);
   line-height: 0.82;
   letter-spacing: -0.09em;
@@ -156,7 +155,7 @@ h3 {
 }
 
 .lede {
-  color: rgba(32, 26, 18, 0.72);
+  color: var(--ink);
   font-size: 1.06rem;
   line-height: 1.45;
 }
@@ -180,8 +179,7 @@ h3 {
 .setup-form label {
   display: grid;
   gap: 0.4rem;
-  color: rgba(32, 26, 18, 0.76);
-  font-family: Verdana, Geneva, sans-serif;
+  color: var(--ink);
   font-size: 0.82rem;
   font-weight: 800;
 }
@@ -224,7 +222,6 @@ h3 {
   padding: 0;
   background: var(--navy);
   color: var(--cream);
-  font-family: Verdana, Geneva, sans-serif;
   font-size: 1.65rem;
   line-height: 1;
   z-index: 2;
@@ -275,8 +272,7 @@ h3 {
   /* Compact scoreboard strip during play. */
   display: flex;
   justify-content: space-between;
-  color: var(--navy);
-  font-family: Verdana, Geneva, sans-serif;
+  color: var(--ink);
   font-size: 0.82rem;
   font-weight: 900;
   letter-spacing: 0.12em;
@@ -292,7 +288,6 @@ h3 {
   border: 10px solid var(--tomato);
   border-radius: 50%;
   background: var(--sun);
-  font-family: Verdana, Geneva, sans-serif;
   font-size: clamp(3rem, 17vw, 5.6rem);
   font-weight: 900;
   box-shadow: inset 0 0 0 8px rgba(255, 253, 244, 0.62);
@@ -356,7 +351,6 @@ h3 {
   gap: 1rem;
   border-bottom: 1px solid rgba(32, 26, 18, 0.1);
   padding-bottom: 0.5rem;
-  font-family: Verdana, Geneva, sans-serif;
 }
 
 .score-row:last-child {
