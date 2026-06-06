@@ -211,7 +211,7 @@ function renderSetup() {
       // remainingDeck is the live draw pile for the current round.
       remainingDeck: shuffle(selectedCards.map((card) => card.id)),
 
-      // guessedPile and skippedPile mirror the deck-management rules in the spec.
+      // guessedPile stores solved cards; skippedPile is kept for save compatibility.
       guessedPile: [],
       skippedPile: [],
 
@@ -277,7 +277,7 @@ function renderTurnStart() {
 }
 
 function startTurn() {
-  // Skips belong to a single turn, so each new turn begins with an empty skipped pile.
+  // Skipped cards now rotate inside remainingDeck, so each new turn starts clean.
   state.skippedPile = [];
 
   // Store startedAt instead of decrementing saved seconds. This makes refresh/resume
@@ -363,14 +363,9 @@ function markCorrect() {
   state.totalScores[state.currentTeam] += 1;
   state.feedback = "correct";
 
-  // If no skipped cards are waiting, the final correct card completes the round.
-  // If skipped cards exist, the turn ends so they can return and be guessed later.
+  // Correct answers permanently remove cards. When none remain, the round is done.
   if (state.remainingDeck.length === 0) {
-    if (state.skippedPile.length === 0) {
-      completeRound();
-    } else {
-      endTurn();
-    }
+    completeRound();
     return;
   }
 
@@ -383,18 +378,12 @@ function markCorrect() {
 function markSkipped() {
   const cardId = state.activeTurn.currentCardId;
 
-  // Skipped cards leave the live deck for now, but return at the end of the turn.
-  state.remainingDeck = state.remainingDeck.filter((id) => id !== cardId);
-  state.skippedPile.push(cardId);
+  // Skipped cards stay available in this same turn: move this card to the back.
+  // If it is the only card left, it stays visible and can be tried again.
+  state.remainingDeck = [...state.remainingDeck.filter((id) => id !== cardId), cardId];
   state.activeTurn.skippedIds.push(cardId);
   state.activeTurn.skipped += 1;
   state.feedback = "skip";
-
-  // If every visible card was skipped, end the turn and recycle the skipped pile.
-  if (state.remainingDeck.length === 0) {
-    endTurn();
-    return;
-  }
 
   state.activeTurn.currentCardId = state.remainingDeck[0];
   saveState();
@@ -428,7 +417,7 @@ function resumePausedTurn() {
 function endTurn() {
   clearInterval(timerId);
 
-  // The important deck rule: skipped cards come back, then the deck is reshuffled.
+  // The next team gets all unsolved cards in a fresh random order.
   state.remainingDeck = shuffle([...state.remainingDeck, ...state.skippedPile]);
 
   // Snapshot summary info before switching teams, because the summary screen needs both.

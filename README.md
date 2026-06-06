@@ -19,7 +19,7 @@ The card database lives in `public/cards_ru_categories.json`. Each card has a na
 - Built-in Russian card database loaded from `public/cards_ru_categories.json`.
 - Three-round party-card flow with alternating team turns.
 - 60-second turns with Correct and Skip actions.
-- Skipped cards return to the remaining deck at the end of each turn.
+- Skipped cards move to the back of the current turn deck, so they can appear again in the same turn.
 - Scores are tracked per round and in total.
 - Browser `localStorage` saves the full game state after every action.
 - Refreshing or reopening restores the current game.
@@ -77,7 +77,7 @@ Then it creates the full initial game state. Important fields include:
 - `currentTeam: 0` because the first team starts.
 - `originalDeck` containing the selected card ids for all three rounds.
 - `remainingDeck` containing a shuffled copy of the selected cards for the current round.
-- `guessedPile` and `skippedPile`, both starting empty.
+- `guessedPile` and compatibility `skippedPile`, both starting empty.
 - `roundScores` and `totalScores`, both starting at zero.
 
 After creating that state, the handler calls `saveState()` and `render()`.
@@ -106,13 +106,13 @@ If the user clicks `Correct`, the click handler calls `markCorrect()`.
 
 If the user clicks `Skip`, the click handler calls `markSkipped()`.
 
-`markSkipped()` removes the current card from `remainingDeck` and adds it to `skippedPile`. Skipped cards do not score points. If no cards remain after skipping, it calls `endTurn()`. Otherwise, it sets the next card and rerenders.
+`markSkipped()` moves the current card to the back of `remainingDeck`. Skipped cards do not score points, but they stay available during the same turn. Then it sets the next card and rerenders.
 
 ### 6. Turn End And Turn Summary
 
-`endTurn()` runs when the timer reaches zero or when all currently available cards were skipped.
+`endTurn()` runs when the timer reaches zero.
 
-First, it stops the timer interval. Then it returns all skipped cards to `remainingDeck` and shuffles the deck. This is the rule that guarantees skipped cards appear again later.
+First, it stops the timer interval. Then it shuffles the remaining unsolved cards before the next team starts.
 
 Then it creates `state.lastTurn`, which stores the team that just played, how many cards they scored, who plays next, and how many cards remain.
 
@@ -156,13 +156,12 @@ At the start of a game:
 During a turn:
 
 - Correct cards move from `remainingDeck` to `guessedPile`.
-- Skipped cards move from `remainingDeck` to `skippedPile`.
+- Skipped cards move from the front of `remainingDeck` to the back of `remainingDeck`.
 
 At the end of a turn:
 
-- `skippedPile` is merged back into `remainingDeck`.
 - `remainingDeck` is shuffled.
-- `skippedPile` is cleared.
+- `skippedPile` is cleared for compatibility with older saved-state structure.
 
 At the start of rounds 2 and 3:
 
@@ -195,14 +194,14 @@ When the app starts, `loadState()` checks localStorage. If a saved game exists, 
 Browsers sometimes cache static GitHub Pages files aggressively. To make updates easier to see, `index.html` defines:
 
 ```js
-window.APP_VERSION = "2026-06-06-16";
+window.APP_VERSION = "2026-06-06-17";
 ```
 
 The same version is added to the CSS and JavaScript URLs:
 
 ```html
-./src/styles.css?v=2026-06-06-16
-./src/app.js?v=2026-06-06-16
+./src/styles.css?v=2026-06-06-17
+./src/app.js?v=2026-06-06-17
 ```
 
 When this version changes, the browser treats the files as new URLs and requests fresh copies from GitHub Pages.
