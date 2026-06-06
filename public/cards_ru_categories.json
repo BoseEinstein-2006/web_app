@@ -691,12 +691,12 @@
   },
   {
     "id": 139,
-    "name": "Michael Jackson",
+    "name": "Майкл Джексон",
     "category": "Music"
   },
   {
     "id": 140,
-    "name": "Britney Spears",
+    "name": "Бритни Спирс",
     "category": "Music"
   },
   {
@@ -3343,5 +3343,35 @@
     "id": 669,
     "name": "Меладзе",
     "category": "Music"
-  }
+  },
+  {
+    "id": 670,
+    "name": "Физфак",
+    "category": "Misc"
+  },
+  {
+    "id": 671,
+    "name": "Четырка",
+    "category": "Misc"
+  },
+  {
+    "id": 672,
+    "name": "Авдеевка",
+    "category": "Travel"
+  },
+  {
+    "id": 673,
+    "name": "Петергоф",
+    "category": "Travel"
+  },
+  {
+    "id": 674,
+    "name": "ПУНК",
+    "category": "Travel"
+  },
+  {
+    "id": 675,
+    "name": "Мавзолей",
+    "category": "Misc"
+  },
 ]
