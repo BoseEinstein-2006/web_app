@@ -258,7 +258,7 @@ function renderTurnStart() {
   // Turn Start is the handoff screen. The phone can be passed before the timer starts.
   app.innerHTML = `
     <section class="screen card-panel center setup-screen">
-      <button class="back-button setup-back-button" data-action="back-setup" aria-label="Назад">←</button>
+      <button class="back-button setup-back-button" data-action="save-home" aria-label="Назад">←</button>
       <p class="round-label">РАУНД ${state.round}</p>
       <h2>Ход команды ${currentTeam().name}</h2>
       <p class="lede">Осталось карт: ${state.remainingDeck.length}</p>
@@ -267,10 +267,10 @@ function renderTurnStart() {
   `;
 
   on("start-turn", startTurn);
-  on("back-setup", () => {
-    // Return to setup with the selected values preserved for quick corrections.
-    state.screen = "setup";
+  on("save-home", () => {
+    // Save the current handoff state, then return to home so Continue can restore it.
     saveState();
+    state = null;
     render();
   });
 }
