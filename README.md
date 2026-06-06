@@ -2,6 +2,9 @@
 
 A mobile-friendly pass-and-play Monikers app for one shared phone. The app is a static single page application, so it can run on GitHub Pages without a backend, build server, user accounts, or API.
 
+Click on the link to play:
+https://boseeinstein-2006.github.io/2_Monikers_web_app/
+
 ## General Overview
 
 The app is intentionally simple: `index.html` contains one empty `<main id="app">`, and `src/app.js` fills that element with the current screen. There is no router library. Instead, the app stores the current screen name in `state.screen`, then the central `render()` function calls the matching screen renderer.
