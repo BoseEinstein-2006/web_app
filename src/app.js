@@ -95,9 +95,7 @@ function renderHome() {
   const hasSavedGame = Boolean(localStorage.getItem(STORAGE_KEY));
   app.innerHTML = `
     <section class="screen hero">
-      <p class="eyebrow">Pass-and-play party chaos</p>
-      <h1>PARTY CARDS</h1>
-      <p class="lede">One phone. Two teams. Three rounds of increasingly questionable clues.</p>
+      <h1>Monikers у нас дома</h1>
       <div class="button-stack">
         <button class="primary" data-action="new-game">New Game</button>
         ${hasSavedGame ? '<button class="secondary" data-action="resume-game">Resume Game</button>' : ""}
