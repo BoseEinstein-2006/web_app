@@ -22,8 +22,8 @@ const app = document.querySelector("#app");
 let allCards = [];
 
 // state is the single source of truth for the app.
-// If localStorage contains a saved game, loadState() restores it immediately.
-let state = loadState();
+// The app starts on the home screen; saved games load only from Continue.
+let state = null;
 
 // Holds the interval id while an active turn is counting down.
 let timerId = null;
@@ -124,7 +124,8 @@ function renderHome() {
   `;
 
   on("new-game", () => {
-    // New Game does not immediately create the deck; it first opens setup.
+    // New Game intentionally deletes saved progress before opening setup.
+    clearState();
     state = { screen: "setup" };
     render();
   });
@@ -134,6 +135,7 @@ function renderHome() {
 
     // Resume restores the exact previous state, including round/team/deck.
     state = loadState();
+    resumePausedTurn();
     render();
   });
 
@@ -308,7 +310,7 @@ function renderActiveTurn() {
   const card = state.cardsById[turn.currentCardId];
   app.innerHTML = `
     <section class="screen play-screen ${state.feedback ? `flash-${state.feedback}` : ""}">
-      <button class="back-button play-back-button" data-action="cancel-turn" aria-label="Назад">←</button>
+      <button class="back-button play-back-button" data-action="pause-turn" aria-label="Назад">←</button>
       <div class="top-row">
         <span>РАУНД ${state.round}</span>
         <span>${currentTeam().name}</span>
@@ -322,7 +324,7 @@ function renderActiveTurn() {
     </section>
   `;
 
-  on("cancel-turn", cancelActiveTurn);
+  on("pause-turn", pauseActiveTurn);
   on("correct", markCorrect);
   on("skip", markSkipped);
 
@@ -398,24 +400,28 @@ function markSkipped() {
   render();
 }
 
-function cancelActiveTurn() {
+function pauseActiveTurn() {
   clearInterval(timerId);
 
-  const correctIds = state.activeTurn?.correctIds || [];
-  const skippedIds = state.activeTurn?.skippedIds || [];
-
-  // Undo score/card changes from this unfinished turn before returning to handoff.
-  state.guessedPile = state.guessedPile.filter((id) => !correctIds.includes(id));
-  state.skippedPile = state.skippedPile.filter((id) => !skippedIds.includes(id));
-  state.roundScores[state.round - 1][state.currentTeam] -= correctIds.length;
-  state.totalScores[state.currentTeam] -= correctIds.length;
-  state.remainingDeck = shuffle([...state.remainingDeck, ...correctIds, ...skippedIds]);
-
-  state.activeTurn = null;
+  // Save the exact active-turn state, including already scored/skipped cards.
+  state.activeTurn.remainingSeconds = getSecondsLeft(state.activeTurn);
+  state.activeTurn.paused = true;
   state.feedback = null;
-  state.screen = "turn-start";
   saveState();
+
+  state = null;
   render();
+}
+
+function resumePausedTurn() {
+  if (state?.screen !== "active-turn" || !state.activeTurn?.paused) return;
+
+  // Restart the countdown from the stored remaining seconds instead of real elapsed time.
+  state.activeTurn.duration = state.activeTurn.remainingSeconds;
+  state.activeTurn.startedAt = Date.now();
+  state.activeTurn.paused = false;
+  delete state.activeTurn.remainingSeconds;
+  saveState();
 }
 
 function endTurn() {
@@ -602,6 +608,8 @@ function otherTeam() {
 }
 
 function getSecondsLeft(turn) {
+  if (turn.paused) return turn.remainingSeconds;
+
   // Timer math is based on actual elapsed wall-clock time.
   const elapsed = Math.floor((Date.now() - turn.startedAt) / 1000);
   return Math.max(0, turn.duration - elapsed);
