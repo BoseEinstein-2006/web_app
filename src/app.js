@@ -159,16 +159,14 @@ function renderRules() {
 }
 
 function renderSetup() {
-  // Setup collects only the MVP fields from the summary: team names, team sizes, deck size.
+  // Setup collects the team names and deck size needed to start a game.
   const defaults = getSetupDefaults();
   app.innerHTML = `
     <section class="screen card-panel setup-screen">
       <button class="back-button setup-back-button" data-action="back-home" aria-label="Назад">←</button>
       <form id="setup-form" class="setup-form">
         ${field("teamA", "Название команды 1", defaults.teamA, "text")}
-        ${field("teamASize", "Игроков в команде 1", defaults.teamASize, "number", 1)}
         ${field("teamB", "Название команды 2", defaults.teamB, "text")}
-        ${field("teamBSize", "Игроков в команде 2", defaults.teamBSize, "number", 1)}
         ${field("deckSize", "Карт в колоде", defaults.deckSize, "number", 5, allCards.length)}
         <button class="primary" type="submit">Начать игру</button>
       </form>
@@ -196,8 +194,8 @@ function renderSetup() {
       screen: "turn-start",
       round: 1,
       teams: [
-        { name: clean(form.get("teamA")) || "Команда А", players: Number(form.get("teamASize")) || 3 },
-        { name: clean(form.get("teamB")) || "Команда Б", players: Number(form.get("teamBSize")) || 3 },
+        { name: clean(form.get("teamA")) || "Команда А" },
+        { name: clean(form.get("teamB")) || "Команда Б" },
       ],
       currentTeam: 0,
 
@@ -230,9 +228,7 @@ function renderSetup() {
 function getSetupDefaults() {
   return {
     teamA: state?.teams?.[0]?.name || "Команда А",
-    teamASize: state?.teams?.[0]?.players || 3,
     teamB: state?.teams?.[1]?.name || "Команда Б",
-    teamBSize: state?.teams?.[1]?.players || 3,
     deckSize: state?.originalDeck?.length || 40,
   };
 }
