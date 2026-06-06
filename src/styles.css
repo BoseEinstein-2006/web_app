@@ -39,11 +39,10 @@ input {
 
 button {
   min-height: 56px;
-  border: 2px solid rgba(32, 26, 18, 0.16);
+  border: 0;
   border-radius: 999px;
   padding: 0.95rem 1.25rem;
-  color: var(--ink);
-  background: var(--cream);
+  color: var(--cream);
   font-weight: 800;
   letter-spacing: 0.02em;
   cursor: pointer;
@@ -188,22 +187,23 @@ h3 {
 }
 
 .primary {
-  background: var(--cream);
-  color: var(--ink);
+  background: var(--navy);
+  color: var(--cream);
 }
 
 .secondary {
-  background: var(--cream);
-  color: var(--ink);
+  background: var(--tomato);
+  color: var(--cream);
 }
 
 .ghost {
-  background: var(--cream);
-  color: var(--ink);
+  background: var(--navy);
+  color: var(--cream);
 }
 
 .rules-button {
-  background: var(--cream);
+  background: var(--sun);
+  color: var(--cream);
 }
 
 .rules-screen {
@@ -222,8 +222,8 @@ h3 {
   min-height: 3.3rem;
   place-items: center;
   padding: 0;
-  background: var(--cream);
-  color: var(--ink);
+  background: var(--navy);
+  color: var(--cream);
   font-family: Verdana, Geneva, sans-serif;
   font-size: 1.65rem;
   line-height: 1;
@@ -322,12 +322,13 @@ h3 {
 }
 
 .correct {
-  background: var(--cream);
+  background: var(--mint);
+  color: var(--cream);
 }
 
 .skip {
-  background: var(--cream);
-  color: var(--ink);
+  background: var(--tomato);
+  color: var(--cream);
 }
 
 .score-board,

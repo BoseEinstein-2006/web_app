@@ -197,14 +197,14 @@ When the app starts, `loadState()` checks localStorage. If a saved game exists, 
 Browsers sometimes cache static GitHub Pages files aggressively. To make updates easier to see, `index.html` defines:
 
 ```js
-window.APP_VERSION = "2026-06-06-8";
+window.APP_VERSION = "2026-06-06-9";
 ```
 
 The same version is added to the CSS and JavaScript URLs:
 
 ```html
-./src/styles.css?v=2026-06-06-8
-./src/app.js?v=2026-06-06-8
+./src/styles.css?v=2026-06-06-9
+./src/app.js?v=2026-06-06-9
 ```
 
 When this version changes, the browser treats the files as new URLs and requests fresh copies from GitHub Pages.
