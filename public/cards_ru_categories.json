@@ -4643,5 +4643,510 @@
     "id": 929,
     "name": "Рамзан Кадыров",
     "category": "Misc"
-  }
+  },
+    {
+    "id": 930,
+    "name": "Беременна в 16",
+    "category": "TV"
+  },
+  {
+    "id": 931,
+    "name": "Жди меня",
+    "category": "TV"
+  },
+  {
+    "id": 932,
+    "name": "Битва экстрасенсов",
+    "category": "TV"
+  },
+  {
+    "id": 933,
+    "name": "Доцент",
+    "category": "Chars"
+  },
+  {
+    "id": 934,
+    "name": "Фрейд",
+    "category": "Science"
+  },
+  {
+    "id": 935,
+    "name": "Капа",
+    "category": "Sports"
+  },
+  {
+    "id": 936,
+    "name": "Гонг",
+    "category": "Sports"
+  },
+  {
+    "id": 937,
+    "name": "Сапёр",
+    "category": "Games"
+  },
+  {
+    "id": 938,
+    "name": "Косынка",
+    "category": "Games"
+  },
+  {
+    "id": 939,
+    "name": "Наташ, мы всё уронили",
+    "category": "Memes"
+  },
+  {
+    "id": 940,
+    "name": "Это фиаско, братан",
+    "category": "Memes"
+  },
+  {
+    "id": 941,
+    "name": "Субботник",
+    "category": "Society"
+  },
+  {
+    "id": 942,
+    "name": "Чурчхела",
+    "category": "Food"
+  },
+  {
+    "id": 943,
+    "name": "Варёная кукуруза",
+    "category": "Food"
+  },
+  {
+    "id": 944,
+    "name": "Орешки со сгущёнкой",
+    "category": "Food"
+  },
+  {
+    "id": 945,
+    "name": "Пирожное картошка",
+    "category": "Food"
+  },
+  {
+    "id": 946,
+    "name": "Глинтвейн",
+    "category": "Food"
+  },
+  {
+    "id": 947,
+    "name": "Тату-мастер",
+    "category": "Jobs"
+  },
+  {
+    "id": 948,
+    "name": "Кинолог",
+    "category": "Jobs"
+  },
+  {
+    "id": 949,
+    "name": "Новоселье",
+    "category": "Holidays"
+  },
+  {
+    "id": 950,
+    "name": "Вомбат",
+    "category": "Animals"
+  },
+  {
+    "id": 951,
+    "name": "Сфинкс",
+    "category": "Myths"
+  },
+  {
+    "id": 952,
+    "name": "Цербер",
+    "category": "Myths"
+  },
+  {
+    "id": 953,
+    "name": "Испанский стыд",
+    "category": "Emotions"
+  },
+  {
+    "id": 954,
+    "name": "Пассивная агрессия",
+    "category": "Society"
+  },
+  {
+    "id": 955,
+    "name": "Синдром самозванца",
+    "category": "Society"
+  },
+  {
+    "id": 956,
+    "name": "Селфи-палка",
+    "category": "Objects"
+  },
+  {
+    "id": 957,
+    "name": "Капсула времени",
+    "category": "Objects"
+  },
+  {
+    "id": 958,
+    "name": "Повар спрашивает повара",
+    "category": "TV"
+  },
+  {
+    "id": 959,
+    "name": "Михаил Шуфутинский",
+    "category": "Misc"
+  },
+  {
+    "id": 960,
+    "name": "Это Спарта!",
+    "category": "Memes"
+  },
+  {
+    "id": 961,
+    "name": "Кот Борис",
+    "category": "Chars"
+  },
+  {
+    "id": 962,
+    "name": "Жиза",
+    "category": "Memes"
+  },
+  {
+    "id": 963,
+    "name": "Рофл",
+    "category": "Memes"
+  },
+  {
+    "id": 964,
+    "name": "Гарольд, скрывающий боль",
+    "category": "Chars"
+  },
+  {
+    "id": 965,
+    "name": "Тёщин язык",
+    "category": "Food"
+  },
+  {
+    "id": 966,
+    "name": "Магнитик на холодильнике",
+    "category": "Objects"
+  },
+  {
+    "id": 967,
+    "name": "Непрошеный совет",
+    "category": "Misc"
+  },
+  {
+    "id": 968,
+    "name": "Краш",
+    "category": "Internet"
+  },
+  {
+    "id": 969,
+    "name": "Секстинг",
+    "category": "Internet"
+  },
+  {
+    "id": 970,
+    "name": "Зена, королева воинов",
+    "category": "Chars"
+  },
+  {
+    "id": 971,
+    "name": "Лунная походка",
+    "category": "Misc"
+  },
+  {
+    "id": 972,
+    "name": "Гик",
+    "category": "Internet"
+  },
+  {
+    "id": 973,
+    "name": "Фиксики",
+    "category": "Chars"
+  },
+  {
+    "id": 974,
+    "name": "Хазбик",
+    "category": "Memes"
+  },
+  {
+    "id": 975,
+    "name": "Чемодан без ручки",
+    "category": "Objects"
+  },
+  {
+    "id": 976,
+    "name": "Собака на сене",
+    "category": "Misc"
+  },
+  {
+    "id": 977,
+    "name": "Евнух",
+    "category": "Misc"
+  },
+  {
+    "id": 978,
+    "name": "Спермобак",
+    "category": "Misc"
+  },
+  {
+    "id": 979,
+    "name": "Членоголодная",
+    "category": "Misc"
+  },
+  {
+    "id": 980,
+    "name": "Шпагоглотатель",
+    "category": "Jobs"
+  },
+  {
+    "id": 981,
+    "name": "Гульфик",
+    "category": "Objects"
+  },
+  {
+    "id": 982,
+    "name": "Гильотина",
+    "category": "Objects"
+  },
+  {
+    "id": 983,
+    "name": "Гомеопатия",
+    "category": "Society"
+  },
+  {
+    "id": 984,
+    "name": "Геморрой",
+    "category": "Misc"
+  },
+  {
+    "id": 985,
+    "name": "Понос",
+    "category": "Misc"
+  },
+  {
+    "id": 986,
+    "name": "Запор",
+    "category": "Misc"
+  },
+  {
+    "id": 987,
+    "name": "Боррелиоз",
+    "category": "Misc"
+  },
+  {
+    "id": 988,
+    "name": "Летающая тарелка",
+    "category": "Myths"
+  },
+  {
+    "id": 989,
+    "name": "Бермудский треугольник",
+    "category": "Misc"
+  },
+  {
+    "id": 990,
+    "name": "Чёрный ящик",
+    "category": "Objects"
+  },
+  {
+    "id": 991,
+    "name": "Белая ворона",
+    "category": "Misc"
+  },
+  {
+    "id": 992,
+    "name": "Тёмная лошадка",
+    "category": "Misc"
+  },
+  {
+    "id": 993,
+    "name": "Кот в мешке",
+    "category": "Misc"
+  },
+  {
+    "id": 994,
+    "name": "Волк в овечьей шкуре",
+    "category": "Misc"
+  },
+  {
+    "id": 995,
+    "name": "Медвежья услуга",
+    "category": "Misc"
+  },
+  {
+    "id": 996,
+    "name": "Ахиллесова пята",
+    "category": "Misc"
+  },
+  {
+    "id": 997,
+    "name": "Ящик Пандоры",
+    "category": "Misc"
+  },
+  {
+    "id": 998,
+    "name": "Заначка",
+    "category": "Objects"
+  },
+  {
+    "id": 999,
+    "name": "Чревовещатель",
+    "category": "Jobs"
+  },
+  {
+    "id": 1000,
+    "name": "Канатоходец",
+    "category": "Jobs"
+  },
+  {
+    "id": 1001,
+    "name": "Лунатик",
+    "category": "Misc"
+  },
+  {
+    "id": 1002,
+    "name": "Сперматозоид",
+    "category": "Misc"
+  },
+  {
+    "id": 1003,
+    "name": "Проктолог",
+    "category": "Jobs"
+  },
+  {
+    "id": 1004,
+    "name": "Многочлен",
+    "category": "Misc"
+  },
+  {
+    "id": 1005,
+    "name": "Гинеколог",
+    "category": "Jobs"
+  },
+  {
+    "id": 1006,
+    "name": "Сексолог",
+    "category": "Jobs"
+  },
+  {
+    "id": 1007,
+    "name": "Нудист",
+    "category": "Misc"
+  },
+  {
+    "id": 1008,
+    "name": "Эксгибиционист",
+    "category": "Misc"
+  },
+  {
+    "id": 1009,
+    "name": "Сомелье",
+    "category": "Jobs"
+  },
+  {
+    "id": 1010,
+    "name": "Конспиролог",
+    "category": "Society"
+  },
+  {
+    "id": 1011,
+    "name": "Инквизитор",
+    "category": "Myths"
+  },
+  {
+    "id": 1012,
+    "name": "Некромант",
+    "category": "Myths"
+  },
+  {
+    "id": 1013,
+    "name": "Алхимик",
+    "category": "Myths"
+  },
+  {
+    "id": 1014,
+    "name": "Могильщик",
+    "category": "Jobs"
+  },
+  {
+    "id": 1015,
+    "name": "Палач",
+    "category": "Jobs"
+  },
+  {
+    "id": 1016,
+    "name": "Гробовщик",
+    "category": "Jobs"
+  },
+  {
+    "id": 1017,
+    "name": "Шаман",
+    "category": "Jobs"
+  },
+  {
+    "id": 1018,
+    "name": "Оборотень",
+    "category": "Myths"
+  },
+  {
+    "id": 1019,
+    "name": "Коитус",
+    "category": "Misc"
+  },
+  {
+    "id": 1020,
+    "name": "Очко",
+    "category": "Misc"
+  },
+  {
+    "id": 1021,
+    "name": "Собачий кайф",
+    "category": "Misc"
+  },
+  {
+    "id": 1022,
+    "name": "Каннибализм",
+    "category": "Misc"
+  },
+  {
+    "id": 1023,
+    "name": "Репрессии",
+    "category": "Society"
+  },
+  {
+    "id": 1024,
+    "name": "Геноцид",
+    "category": "Society"
+  },
+  {
+    "id": 1025,
+    "name": "Холокост",
+    "category": "Society"
+  },
+  {
+    "id": 1026,
+    "name": "Вупсень и Пупсень",
+    "category": "Chars"
+  },
+  {
+    "id": 1027,
+    "name": "Генерал Шершуля",
+    "category": "Chars"
+  },
+  {
+    "id": 1028,
+    "name": "Лунтик",
+    "category": "Chars"
+  },
+  {
+    "id": 1029,
+    "name": "Жока и Бока",
+    "category": "Chars"
+  },
+  {
+    "id": 1030,
+    "name": "Тарзан",
+    "category": "Chars"
+  },
 ]
