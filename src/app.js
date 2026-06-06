@@ -147,8 +147,8 @@ function renderHome() {
 function renderRules() {
   app.innerHTML = `
     <section class="screen rules-screen">
-      <button class="back-button" data-action="back-home" aria-label="Back to home">←</button>
-      <img class="rules-image" src="./gorilla_image.jpg" alt="Game rules" />
+      <button class="back-button" data-action="back-home" aria-label="Назад">←</button>
+      <img class="rules-image" src="./gorilla_image.jpg" alt="Правила игры" />
     </section>
   `;
 
@@ -288,8 +288,11 @@ function startTurn() {
     duration: TURN_SECONDS,
     score: 0,
     skipped: 0,
+    correctIds: [],
+    skippedIds: [],
     currentCardId: state.remainingDeck[0],
   };
+  state.feedback = null;
   state.screen = "active-turn";
   saveState();
   render();
@@ -308,22 +311,35 @@ function renderActiveTurn() {
 
   const card = state.cardsById[turn.currentCardId];
   app.innerHTML = `
-    <section class="screen play-screen">
+    <section class="screen play-screen ${state.feedback ? `flash-${state.feedback}` : ""}">
+      <button class="back-button play-back-button" data-action="cancel-turn" aria-label="Назад">←</button>
       <div class="top-row">
-        <span>ROUND ${state.round}</span>
+        <span>РАУНД ${state.round}</span>
         <span>${currentTeam().name}</span>
       </div>
       <div class="timer" data-timer>${secondsLeft}</div>
-      <article class="current-card">${card?.name || "No card"}</article>
+      <article class="current-card">${card?.name || "Нет карты"}</article>
       <div class="action-grid">
-        <button class="correct" data-action="correct">Correct</button>
-        <button class="skip" data-action="skip">Skip</button>
+        <button class="correct" data-action="correct">Правильно</button>
+        <button class="skip" data-action="skip">Пропустить</button>
       </div>
     </section>
   `;
 
+  on("cancel-turn", cancelActiveTurn);
   on("correct", markCorrect);
   on("skip", markSkipped);
+
+  if (state.feedback) {
+    const feedback = state.feedback;
+    setTimeout(() => {
+      if (state?.screen === "active-turn" && state.feedback === feedback) {
+        state.feedback = null;
+        saveState();
+        render();
+      }
+    }, 260);
+  }
 
   // Repaint only the timer text every 250ms. Card/scores rerender after button clicks.
   timerId = setInterval(() => {
@@ -340,11 +356,13 @@ function markCorrect() {
   // Correct cards leave the remaining deck permanently for this round.
   state.remainingDeck = state.remainingDeck.filter((id) => id !== cardId);
   state.guessedPile.push(cardId);
+  state.activeTurn.correctIds.push(cardId);
 
   // Update both the active-turn score and the persistent round/total scoreboards.
   state.activeTurn.score += 1;
   state.roundScores[state.round - 1][state.currentTeam] += 1;
   state.totalScores[state.currentTeam] += 1;
+  state.feedback = "correct";
 
   // If the final card was guessed, the round ends immediately instead of waiting.
   if (state.remainingDeck.length === 0) {
@@ -364,7 +382,9 @@ function markSkipped() {
   // Skipped cards leave the live deck for now, but return at the end of the turn.
   state.remainingDeck = state.remainingDeck.filter((id) => id !== cardId);
   state.skippedPile.push(cardId);
+  state.activeTurn.skippedIds.push(cardId);
   state.activeTurn.skipped += 1;
+  state.feedback = "skip";
 
   // If every visible card was skipped, end the turn and recycle the skipped pile.
   if (state.remainingDeck.length === 0) {
@@ -373,6 +393,26 @@ function markSkipped() {
   }
 
   state.activeTurn.currentCardId = state.remainingDeck[0];
+  saveState();
+  render();
+}
+
+function cancelActiveTurn() {
+  clearInterval(timerId);
+
+  const correctIds = state.activeTurn?.correctIds || [];
+  const skippedIds = state.activeTurn?.skippedIds || [];
+
+  // Undo score/card changes from this unfinished turn before returning to handoff.
+  state.guessedPile = state.guessedPile.filter((id) => !correctIds.includes(id));
+  state.skippedPile = state.skippedPile.filter((id) => !skippedIds.includes(id));
+  state.roundScores[state.round - 1][state.currentTeam] -= correctIds.length;
+  state.totalScores[state.currentTeam] -= correctIds.length;
+  state.remainingDeck = shuffle([...state.remainingDeck, ...correctIds, ...skippedIds]);
+
+  state.activeTurn = null;
+  state.feedback = null;
+  state.screen = "turn-start";
   saveState();
   render();
 }
@@ -392,6 +432,7 @@ function endTurn() {
   };
   state.skippedPile = [];
   state.activeTurn = null;
+  state.feedback = null;
 
   // Teams alternate every turn: Team A -> Team B -> Team A -> ...
   state.currentTeam = state.currentTeam === 0 ? 1 : 0;
@@ -404,11 +445,11 @@ function renderTurnSummary() {
   // The summary is the pause between teams after the timer runs out.
   app.innerHTML = `
     <section class="screen card-panel center">
-      <p class="eyebrow">Time's Up</p>
-      <h2>${state.lastTurn.teamName} scored ${state.lastTurn.score} cards</h2>
-      <p class="lede">Cards remaining: ${state.lastTurn.remaining}</p>
-      <p class="lede">Next Team: ${state.lastTurn.nextTeamName}</p>
-      <button class="primary" data-action="next-turn">Start Turn for ${state.lastTurn.nextTeamName}</button>
+      <p class="eyebrow">Время вышло</p>
+      <h2>${state.lastTurn.teamName}: угадано карт ${state.lastTurn.score}</h2>
+      <p class="lede">Осталось карт: ${state.lastTurn.remaining}</p>
+      <p class="lede">Следующая команда: ${state.lastTurn.nextTeamName}</p>
+      <button class="primary" data-action="next-turn">Начать ход команды ${state.lastTurn.nextTeamName}</button>
     </section>
   `;
 
@@ -426,6 +467,7 @@ function completeRound() {
   // The deck is empty, so no turn summary is needed. Show round results or final results.
   state.activeTurn = null;
   state.skippedPile = [];
+  state.feedback = null;
 
   // Switch the next starting team so turns keep alternating across round boundaries.
   state.currentTeam = state.currentTeam === 0 ? 1 : 0;
@@ -438,10 +480,10 @@ function renderRoundComplete() {
   // Round Complete displays only the round just finished, then starts the next round.
   app.innerHTML = `
     <section class="screen card-panel center">
-      <p class="eyebrow">Round Complete</p>
-      <h2>Round ${state.round} Complete</h2>
+      <p class="eyebrow">Раунд завершён</p>
+      <h2>Раунд ${state.round} завершён</h2>
       ${scoreRows(state.round - 1)}
-      <button class="primary" data-action="next-round">Start Round ${state.round + 1}</button>
+      <button class="primary" data-action="next-round">Начать раунд ${state.round + 1}</button>
     </section>
   `;
 
@@ -463,26 +505,26 @@ function renderGameOver() {
   // Winner is calculated from total scores after round 3 completes.
   const winner =
     state.totalScores[0] === state.totalScores[1]
-      ? "It is a tie"
-      : `${state.teams[state.totalScores[0] > state.totalScores[1] ? 0 : 1].name} Wins`;
+      ? "Ничья"
+      : `Победила команда ${state.teams[state.totalScores[0] > state.totalScores[1] ? 0 : 1].name}`;
 
   app.innerHTML = `
     <section class="screen card-panel">
-      <p class="eyebrow">GAME OVER</p>
+      <p class="eyebrow">Игра окончена</p>
       <h2>${winner}</h2>
       <div class="score-board">
         ${Array.from({ length: MAX_ROUNDS }, (_, index) => `
           <div class="score-block">
-            <h3>Round ${index + 1}</h3>
+            <h3>Раунд ${index + 1}</h3>
             ${scoreRows(index)}
           </div>
         `).join("")}
         <div class="score-block total">
-          <h3>Total</h3>
+          <h3>Итого</h3>
           ${totalRows()}
         </div>
       </div>
-      <button class="primary" data-action="play-again">Play Again</button>
+      <button class="primary" data-action="play-again">Играть снова</button>
     </section>
   `;
 
