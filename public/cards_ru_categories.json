@@ -596,7 +596,7 @@
   },
   {
     "id": 120,
-    "name": "Кино",
+    "name": "Кино (Группа)",
     "category": "Music"
   },
   {
@@ -621,7 +621,7 @@
   },
   {
     "id": 125,
-    "name": "Руки Вверх!",
+    "name": "Конокрад",
     "category": "Music"
   },
   {
@@ -631,7 +631,7 @@
   },
   {
     "id": 127,
-    "name": "Ленинград",
+    "name": "Ленинград (Группа)",
     "category": "Music"
   },
   {
@@ -701,7 +701,7 @@
   },
   {
     "id": 141,
-    "name": "Грибы",
+    "name": "Грибы (Группа)",
     "category": "Music"
   },
   {
@@ -716,22 +716,22 @@
   },
   {
     "id": 144,
-    "name": "Radiohead",
+    "name": "Секс по дружбе",
     "category": "Music"
   },
   {
     "id": 145,
-    "name": "Linkin Park",
+    "name": "Патологоанатом",
     "category": "Music"
   },
   {
     "id": 146,
-    "name": "Metallica",
+    "name": "Папик",
     "category": "Music"
   },
   {
     "id": 147,
-    "name": "AC/DC",
+    "name": "Рабовладелец",
     "category": "Music"
   },
   {
@@ -901,7 +901,7 @@
   },
   {
     "id": 181,
-    "name": "Рузвельт",
+    "name": "Полигамия",
     "category": "History"
   },
   {
@@ -946,7 +946,7 @@
   },
   {
     "id": 190,
-    "name": "Николай II",
+    "name": "Палка о двух концах",
     "category": "History"
   },
   {
@@ -1051,7 +1051,7 @@
   },
   {
     "id": 211,
-    "name": "Александр Белл",
+    "name": "Целибат",
     "category": "Science"
   },
   {
@@ -1101,7 +1101,7 @@
   },
   {
     "id": 221,
-    "name": "Сахаров",
+    "name": "Фальшивомонетчик",
     "category": "Science"
   },
   {
@@ -1191,12 +1191,12 @@
   },
   {
     "id": 239,
-    "name": "Зинедин Зидан",
+    "name": "Шарлатан",
     "category": "Sports"
   },
   {
     "id": 240,
-    "name": "Тайгер Вудс",
+    "name": "Паранойя",
     "category": "Sports"
   },
   {
@@ -1211,12 +1211,12 @@
   },
   {
     "id": 243,
-    "name": "Александр Карелин",
+    "name": "Тарас Шевченко",
     "category": "Sports"
   },
   {
     "id": 244,
-    "name": "Елена Исинбаева",
+    "name": "Раздвоение личности",
     "category": "Sports"
   },
   {
@@ -1226,7 +1226,7 @@
   },
   {
     "id": 246,
-    "name": "Николай Валуев",
+    "name": "Нарцисс",
     "category": "Sports"
   },
   {
@@ -1241,7 +1241,7 @@
   },
   {
     "id": 249,
-    "name": "GTA",
+    "name": "Кастрация",
     "category": "Games"
   },
   {
@@ -1271,22 +1271,22 @@
   },
   {
     "id": 255,
-    "name": "Half-Life",
+    "name": "Копрофилия",
     "category": "Games"
   },
   {
     "id": 256,
-    "name": "Need for Speed",
+    "name": "Вибратор",
     "category": "Games"
   },
   {
     "id": 257,
-    "name": "FIFA",
+    "name": "Гермафродит",
     "category": "Games"
   },
   {
     "id": 258,
-    "name": "Превед Медвед",
+    "name": "Клизма",
     "category": "Memes"
   },
   {
@@ -1546,7 +1546,7 @@
   },
   {
     "id": 310,
-    "name": "Винегрет",
+    "name": "Извращенец",
     "category": "Food"
   },
   {
@@ -1561,7 +1561,7 @@
   },
   {
     "id": 313,
-    "name": "Сырники",
+    "name": "Нимфоманка",
     "category": "Food"
   },
   {
@@ -1576,7 +1576,7 @@
   },
   {
     "id": 316,
-    "name": "Текила",
+    "name": "Содержанка",
     "category": "Party"
   },
   {
@@ -1586,7 +1586,7 @@
   },
   {
     "id": 318,
-    "name": "Караоке",
+    "name": "Маменькин сынок",
     "category": "Party"
   },
   {
@@ -1601,12 +1601,12 @@
   },
   {
     "id": 321,
-    "name": "Кальян",
+    "name": "Милфа",
     "category": "Party"
   },
   {
     "id": 322,
-    "name": "Рюмка",
+    "name": "Куколд",
     "category": "Party"
   },
   {
@@ -1721,7 +1721,7 @@
   },
   {
     "id": 345,
-    "name": "Пирамиды Гизы",
+    "name": "БДСМ",
     "category": "Landmarks"
   },
   {
@@ -1736,7 +1736,7 @@
   },
   {
     "id": 348,
-    "name": "Тадж-Махал",
+    "name": "Донжуан",
     "category": "Landmarks"
   },
   {
@@ -1756,7 +1756,7 @@
   },
   {
     "id": 352,
-    "name": "Фрауэнкирхе",
+    "name": "Разлучница",
     "category": "Landmarks"
   },
   {
@@ -1766,87 +1766,87 @@
   },
   {
     "id": 354,
-    "name": "Риелтор",
+    "name": "Блохи",
     "category": "Jobs"
   },
   {
     "id": 355,
-    "name": "Блогер",
+    "name": "Бородавка",
     "category": "Jobs"
   },
   {
     "id": 356,
-    "name": "Стример",
+    "name": "Глисты",
     "category": "Jobs"
   },
   {
     "id": 357,
-    "name": "Чиновник",
+    "name": "Таксидермист",
     "category": "Jobs"
   },
   {
     "id": 358,
-    "name": "Депутат",
+    "name": "Экзорцист",
     "category": "Jobs"
   },
   {
     "id": 359,
-    "name": "Шахтёр",
+    "name": "Линчевание",
     "category": "Jobs"
   },
   {
     "id": 360,
-    "name": "Новый год",
+    "name": "Фетиш",
     "category": "Holidays"
   },
   {
     "id": 361,
-    "name": "Масленица",
+    "name": "Инцест",
     "category": "Holidays"
   },
   {
     "id": 362,
-    "name": "Первое сентября",
+    "name": "Порка",
     "category": "Holidays"
   },
   {
     "id": 363,
-    "name": "Выпускной",
+    "name": "Альфонс",
     "category": "Holidays"
   },
   {
     "id": 364,
-    "name": "Мальчишник",
+    "name": "Кровосмешение",
     "category": "Holidays"
   },
   {
     "id": 365,
-    "name": "Девичник",
+    "name": "Рогоносец",
     "category": "Holidays"
   },
   {
     "id": 366,
-    "name": "Крещение",
+    "name": "Подкаблучник",
     "category": "Holidays"
   },
   {
     "id": 367,
-    "name": "Хэллоуин",
+    "name": "Курортный роман",
     "category": "Holidays"
   },
   {
     "id": 368,
-    "name": "День святого Валентина",
+    "name": "Любовный треугольник",
     "category": "Holidays"
   },
   {
     "id": 369,
-    "name": "Восьмое марта",
+    "name": "Шведская семья",
     "category": "Holidays"
   },
   {
     "id": 370,
-    "name": "Шашлычный сезон",
+    "name": "Сердцеед",
     "category": "Holidays"
   },
   {
@@ -2146,7 +2146,7 @@
   },
   {
     "id": 430,
-    "name": "Инфляция",
+    "name": "Пятая колонна",
     "category": "Society"
   },
   {
@@ -2206,12 +2206,12 @@
   },
   {
     "id": 442,
-    "name": "Экология",
+    "name": "Пояс верности",
     "category": "Society"
   },
   {
     "id": 443,
-    "name": "Феминизм",
+    "name": "Афродизиак",
     "category": "Society"
   },
   {
@@ -2666,12 +2666,12 @@
   },
   {
     "id": 534,
-    "name": "Суворов",
+    "name": "Секс-туризм",
     "category": "Misc"
   },
   {
     "id": 535,
-    "name": "Кутузов",
+    "name": "Фистинг",
     "category": "Misc"
   },
   {
@@ -2696,7 +2696,7 @@
   },
   {
     "id": 540,
-    "name": "Пикабу",
+    "name": "Овцееб",
     "category": "Misc"
   },
   {
@@ -2706,17 +2706,17 @@
   },
   {
     "id": 542,
-    "name": "Wikipedia",
+    "name": "Зоофилия",
     "category": "Misc"
   },
   {
     "id": 543,
-    "name": "Уха",
+    "name": "Гадкий утёнок",
     "category": "Misc"
   },
   {
     "id": 544,
-    "name": "Щи",
+    "name": "Стокгольмский синдром",
     "category": "Misc"
   },
   {
@@ -2821,17 +2821,17 @@
   },
   {
     "id": 565,
-    "name": "Демография",
+    "name": "Товарищ майор",
     "category": "Misc"
   },
   {
     "id": 566,
-    "name": "Урбанизация",
+    "name": "Открытка в Whatsapp",
     "category": "Misc"
   },
   {
     "id": 567,
-    "name": "Популизм",
+    "name": "Корыто",
     "category": "Misc"
   },
   {
