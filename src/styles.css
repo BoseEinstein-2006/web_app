@@ -171,6 +171,32 @@ h3 {
   margin-top: clamp(2rem, 9svh, 4.5rem);
 }
 
+.language-switch {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35rem;
+  justify-self: center;
+  border: 2px solid rgba(32, 26, 18, 0.12);
+  border-radius: 999px;
+  padding: 0.25rem;
+  background: rgba(255, 253, 244, 0.74);
+}
+
+.language-option {
+  min-height: 38px;
+  padding: 0.45rem 0.9rem;
+  background: transparent;
+  color: var(--ink);
+  box-shadow: none;
+  font-size: 0.82rem;
+}
+
+.language-option.active {
+  background: var(--navy);
+  color: var(--cream);
+  box-shadow: 0 8px 18px rgba(32, 26, 18, 0.16);
+}
+
 .setup-screen {
   position: relative;
   padding-top: 5.5rem;
